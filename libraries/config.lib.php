@@ -3,8 +3,8 @@
     define("DB_USER", 'root');
     define("DB_PASSWORD", 'rtpw');
 
-    define("DB_DATABASE", 'office_iaac');
-    define("DB_DATABASE_HUMANRES", 'office_iaac_hrdb');
+    define("DB_DATABASE", '');
+    define("DB_DATABASE_HUMANRES", 'party_humanres');
 
     define("MYSQL_SHOW_EXCEPTION", 1);
     define("DISPLAY_ALL_ERRORS", 1);
