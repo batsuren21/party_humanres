@@ -1,0 +1,3123 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <json_humanres Ref="2" type="Stimulsoft.Report.Dictionary.StiJsonDatabase" isKey="true">
+        <Alias>json_humanres</Alias>
+        <Key />
+        <Name>json_humanres</Name>
+        <PathData>D:\web\www\office_iaac\print\json_humanres.json</PathData>
+      </json_humanres>
+    </Databases>
+    <DataSources isList="true" count="13">
+      <award Ref="3" type="DataTableSource" isKey="true">
+        <Alias>award</Alias>
+        <Columns isList="true" count="4">
+          <value>AwardRefTitle,System.String</value>
+          <value>AwardTitle,System.String</value>
+          <value>AwardDate,System.String</value>
+          <value>AwardLicence,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>c255b26dc6244b8891c4e88b2f61ba6d</Key>
+        <Name>award</Name>
+        <NameInSource>json_humanres.award</NameInSource>
+      </award>
+      <education Ref="4" type="DataTableSource" isKey="true">
+        <Alias>education</Alias>
+        <Columns isList="true" count="7">
+          <value>EducationSchoolTitle,System.String</value>
+          <value>EducationDateStart,System.String</value>
+          <value>EducationDateEnd,System.String</value>
+          <value>EducationLevelTitle,System.String</value>
+          <value>EducationProfession,System.String</value>
+          <value>EducationDegreeTitle,System.String</value>
+          <value>EducationLicence,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>865b66678c5c48ebab9069ef41aad4c4</Key>
+        <Name>education</Name>
+        <NameInSource>json_humanres.education</NameInSource>
+      </education>
+      <edurank Ref="5" type="DataTableSource" isKey="true">
+        <Alias>edurank</Alias>
+        <Columns isList="true" count="3">
+          <value>EduRankTitle,System.String</value>
+          <value>EduDate,System.String</value>
+          <value>EduNumber,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>bac1c9e9d508413183652622533eb16d</Key>
+        <Name>edurank</Name>
+        <NameInSource>json_humanres.edurank</NameInSource>
+      </edurank>
+      <family Ref="6" type="DataTableSource" isKey="true">
+        <Alias>family</Alias>
+        <Columns isList="true" count="9">
+          <value>FamilyRelationTitle,System.String</value>
+          <value>FamilyLastName,System.String</value>
+          <value>FamilyFirstName,System.String</value>
+          <value>FamilyBirthDate,System.String</value>
+          <value>FamilyBirthPlace,System.String</value>
+          <value>FamilyRefTypeTitle,System.String</value>
+          <value>FamilyJobOrgan,System.String</value>
+          <value>FamilyJobPosition,System.String</value>
+          <value>FamilyAge,System.Decimal</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>2b40c101ce454bf394f29d0fef9b81b0</Key>
+        <Name>family</Name>
+        <NameInSource>json_humanres.family</NameInSource>
+      </family>
+      <general Ref="7" type="DataTableSource" isKey="true">
+        <Alias>general</Alias>
+        <Columns isList="true" count="12">
+          <value>OfficeName,System.String</value>
+          <value>JobFirstDate,System.String</value>
+          <value>JobFirstMilitaryDate,System.String</value>
+          <value>JobFirstATGDate,System.String</value>
+          <value>JobFirstCompanyDate,System.String</value>
+          <value>JobYearsAll,System.String</value>
+          <value>JobYearsGov,System.String</value>
+          <value>JobYearsMilitary,System.String</value>
+          <value>JobYearsOrgan,System.String</value>
+          <value>JobYearsCompany,System.String</value>
+          <value>JobYearsNohon,System.String</value>
+          <value>JobAbsentAll,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>0caab982c8484af5aea8db7df588fb9b</Key>
+        <Name>general</Name>
+        <NameInSource>json_humanres.general</NameInSource>
+      </general>
+      <job Ref="8" type="DataTableSource" isKey="true">
+        <Alias>job</Alias>
+        <Columns isList="true" count="5">
+          <value>RowNum,System.Decimal</value>
+          <value>JobOrganTitle,System.String</value>
+          <value>JobDepartmentTitle,System.String</value>
+          <value>JobPositionTitle,System.String</value>
+          <value>JobDateRange,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>eb413f16061b4aa494d14e0928a7ceb3</Key>
+        <Name>job</Name>
+        <NameInSource>json_humanres.job</NameInSource>
+      </job>
+      <jobabsent Ref="9" type="DataTableSource" isKey="true">
+        <Alias>jobabsent</Alias>
+        <Columns isList="true" count="4">
+          <value>RowNum,System.Decimal</value>
+          <value>JobAbsentStart,System.String</value>
+          <value>JobAbsentEnd,System.String</value>
+          <value>JobAbsentMonthDay,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>3c3a22f456a949bbb13e4b981be2be3b</Key>
+        <Name>jobabsent</Name>
+        <NameInSource>json_humanres.jobabsent</NameInSource>
+      </jobabsent>
+      <language Ref="10" type="DataTableSource" isKey="true">
+        <Alias>language</Alias>
+        <Columns isList="true" count="3">
+          <value>LanguageTitle,System.String</value>
+          <value>LanguageLevelTitle,System.String</value>
+          <value>LanguageYears,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>644773f9819a4a6ea4cf7c8c351faf81</Key>
+        <Name>language</Name>
+        <NameInSource>json_humanres.language</NameInSource>
+      </language>
+      <people Ref="11" type="DataTableSource" isKey="true">
+        <Alias>people</Alias>
+        <Columns isList="true" count="56">
+          <value>PersonID,System.String</value>
+          <value>PersonEmployeeID,System.String</value>
+          <value>PersonEducationLevelID,System.String</value>
+          <value>PersonEducationLevelTitle,System.String</value>
+          <value>PersonEthnicID,System.String</value>
+          <value>PersonEthnicTitle,System.String</value>
+          <value>PersonRegisterNumber,System.String</value>
+          <value>PersonLastName,System.String</value>
+          <value>PersonFirstName,System.String</value>
+          <value>PersonMiddleName,System.String</value>
+          <value>PersonBirthDate,System.String</value>
+          <value>PersonGender,System.String</value>
+          <value>PersonBirthCityID,System.String</value>
+          <value>PersonBirthDistrictID,System.String</value>
+          <value>PersonBirthPlace,System.String</value>
+          <value>PersonBasicCityID,System.String</value>
+          <value>PersonBasicDistrictID,System.String</value>
+          <value>PersonBasicPlace,System.String</value>
+          <value>PersonImageSource,System.String</value>
+          <value>PersonIsSoldiering,System.String</value>
+          <value>PersonSoldierPassNo,System.String</value>
+          <value>PersonSoldierYear,System.String</value>
+          <value>PersonSoldierID,System.String</value>
+          <value>PersonSoldierDescr,System.String</value>
+          <value>PersonContactMobilePhone,System.String</value>
+          <value>PersonContactWorkPhone,System.String</value>
+          <value>PersonContactFax,System.String</value>
+          <value>PersonContactEmail,System.String</value>
+          <value>PersonContactEmailOrgan,System.String</value>
+          <value>PersonContactWebsite,System.String</value>
+          <value>PersonContactEmergencyName,System.String</value>
+          <value>PersonContactEmergencyPhone,System.String</value>
+          <value>PersonAddressCityID,System.String</value>
+          <value>PersonAddressDistrictID,System.String</value>
+          <value>PersonAddressHorooID,System.String</value>
+          <value>PersonAddress,System.String</value>
+          <value>PersonAddressFull,System.String</value>
+          <value>PersonBirthCityName,System.String</value>
+          <value>PersonBirthDistrictName,System.String</value>
+          <value>PersonBasicCityName,System.String</value>
+          <value>PersonBasicDistrictName,System.String</value>
+          <value>PersonAddressCityName,System.String</value>
+          <value>PersonAddressDistrictName,System.String</value>
+          <value>PersonAddressHorooName,System.String</value>
+          <value>PersonCountFamily,System.String</value>
+          <value>DepartmentName,System.String</value>
+          <value>DepartmentFullName,System.String</value>
+          <value>PositionName,System.String</value>
+          <value>PositionFullName,System.String</value>
+          <value>PositionTypeTitle,System.String</value>
+          <value>PositionClassTitle,System.String</value>
+          <value>PositionDegreeTitle,System.String</value>
+          <value>PositionRankTitle,System.String</value>
+          <value>EmployeeStartDate,System.String</value>
+          <value>EmployeeStartOrderNo,System.String</value>
+          <value>Profession,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>73a8cf6d617a47fb9786867d95d47d34</Key>
+        <Name>people</Name>
+        <NameInSource>json_humanres.people</NameInSource>
+      </people>
+      <posrank Ref="12" type="DataTableSource" isKey="true">
+        <Alias>posrank</Alias>
+        <Columns isList="true" count="3">
+          <value>PosRankTitle,System.String</value>
+          <value>PosDate,System.String</value>
+          <value>PosNumber,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>41925feb4505452089ea3452cfc54b75</Key>
+        <Name>posrank</Name>
+        <NameInSource>json_humanres.posrank</NameInSource>
+      </posrank>
+      <punishment Ref="13" type="DataTableSource" isKey="true">
+        <Alias>punishment</Alias>
+        <Columns isList="true" count="4">
+          <value>PunishmentRefTitle,System.String</value>
+          <value>PunishmentOrder,System.String</value>
+          <value>PunishmentOrderDate,System.String</value>
+          <value>PunishmentReason,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>85e7973dd74c4ffc9f9c87be9056e55a</Key>
+        <Name>punishment</Name>
+        <NameInSource>json_humanres.punishment</NameInSource>
+      </punishment>
+      <salary Ref="14" type="DataTableSource" isKey="true">
+        <Alias>salary</Alias>
+        <Columns isList="true" count="6">
+          <value>SalaryValue,System.String</value>
+          <value>SalaryDegreeTitle,System.String</value>
+          <value>SalaryConditionTitle,System.String</value>
+          <value>SalaryEduTitle,System.String</value>
+          <value>SalaryGovTitle,System.String</value>
+          <value>SalarySumPercent,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>394288e8d3394184ab0b106f3a1f3432</Key>
+        <Name>salary</Name>
+        <NameInSource>json_humanres.salary</NameInSource>
+      </salary>
+      <study Ref="15" type="DataTableSource" isKey="true">
+        <Alias>study</Alias>
+        <Columns isList="true" count="9">
+          <value>StudySchoolTitle,System.String</value>
+          <value>StudyTitle,System.String</value>
+          <value>StudyCountryName,System.String</value>
+          <value>StudyDateStart,System.String</value>
+          <value>StudyDateEnd,System.String</value>
+          <value>StudyDay,System.String</value>
+          <value>StudyRefDirectionTitle,System.String</value>
+          <value>StudyLicence,System.String</value>
+          <value>StudyLicenceDate,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>277663e129de410f826050d6db330736</Key>
+        <Name>study</Name>
+        <NameInSource>json_humanres.study</NameInSource>
+      </study>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="2">
+      <value>Name=json, Alias=json, Type=Json, Content=_x0037_e1w8goiq3_x002F_o9Up0ibziQ8PD_x002F_uDEQgT09cpnwfskd388vGozs5EMkFgOD0pXwyEIQa0CaDgHsFV_x002F_8NbG5f7C4jZmWGrOPyAt3F4kAqwJZ4M8p_x002B_K71MdwFUgl1v13LP3UA5NE431VB1eGJE2Ov4nWnYaq4kPpGet0wOJKQVCDOlEDBdapfxtLA66gtaj61rmzxX3AQODuBbBMmNYDPtbfZsqX4j3HYjQViDp2HQ8e4rqyhqITpDiVY7zGK66_x002F_r39QU19t09B5fsAKQr0DzaGIg1N2ak0XU5zUq2gc3osBZAenuTvJi6nJrZiX8pks8h2J6lXZZOOpQc9LxU9VAhUv8O12oYGPgQ1oJAZlxp7O_x002F_4jsXzPI3Mpg9nE_x002F__x002F__x002B_3rLGqJpGuLLA4aYV4owr_x002F_gA_x002F_F70gvJkYKBskBk1BMQ1h_x002B_zUlRLDnjxQGtVOWxWFtAAmB5GYZzdyjZXo7rysEsZagbDbScTqx2BnJ0VoD12to_x002B_O6_x002F_fvr59dRwyGnz15GT_x002F_YucHegFcwkNSDQRHzexBv9LSkgw1Ppe8Y9Hf8Kxphxw_x003D__x003D_</value>
+      <value>Name=json_humanres, Alias=json_humanres, Type=Json, Content=gxgbPgsLxuJABb60LNV5AWqiewBeWTbYv_x002B_n78iRSkHqDRGCgwwPMMxQsGlin1_x002F_YdyOVUggu1vkO82ruVqmQySoVCYcmo5VEoMb0jyi1X60TbkaSOU2n2fVV071EE9Cx2gfO98_x002F_dQQ_x002B_hboZNBPL5b6dH37BJAQE5iSH2aNKM6YpNajeWGNZ_x002F_6kwWTYY9coU4SU_x002F_uyQ2PL2qMmSce_x002B__x002F_ykoe0tI0tIV_x002B_5MfuPnMFGmLG9QWhoA45TH3ei_x002F_E6o8G83yIU_x002B_R8CyX1h0RFQn2c0GviT0hYOlUIHqV2gkei1_x002B_mvr2xyZVU_x002B_hJbFq2ejmc_x002B_CSIgF2qhucayp38xlLcZe9phLN2rI8ayEFfDoPrNbIGECNmlXMSgimTZhdU3zrS9peuRLQVqTg9no5rgBNLws8MiEUszWo0SQhQ1wWFkPMV_x002F_OyWyhDg0dtd8mt_x002B__x002B_LWZjh_x002F_1qHTXYc5dnYj8w3LS6Br7tH3_x002F_Du16nRvVS9foknh7FzdWUfkVLEezxQW47CA67y3K4782AIeloXnhJ1zrm5d5C4w2O8Z_x002F_PRvDfJrUVNOn_x002B_mLctdMoeoMxpjm2cvEO7XHkoy5N_x002F_7y9ArITlZMNooA5s82qQuxZ9XHh_x002B_zEsJZ0qMkIrfAalyJxYWfRsMjgPf0Alt6pREdhJ02hpbiAymwThCP2GfX0fz41ia_x002F_kGy1QPsbzPqUKNhskIHBbe1Gbc4mc0L7_x002F_Rej_x002B_EFhnX418FoHaGy_x002B_l78qUsXilxjYKTm9NmAucK4wocFmbDYPNGfDueQAUt5ozVb1hbn01cx6z61H8qfo4VsmZQP9REyBlplUo6qtVEDPJAY32CHLxGX68zc_x002F_rRqwHbwifONN3_x002F_YHLLeU14mmGaGTf3tX4x8FTz9xKBm24Q7d2K_x002B_p46SxwxxHrF7xMVPeJBoXMpR4Y024IjMTCgANIGXJr1VwigJKW9r9jzOe6q03E1ijN6CAhSILDF4PrDE88qr3_x002F_BpoXFCSL71bZ2c_x002F_CUShRqNwjWdgjd_x002B_uCRhJV_x002B_2yIzrQ1xRq0Y1csenS5kDfxRCbfdCE9BXBkt_x002B_wccWEEHECLvsbP7IZbssWfOrGLaXJDTj5uLJzeAZDSJC3Fz4_x002F_Y0fjkCCAJ44tItVmNasSH6RB6FyKnDi7ZuYVYHhXGlryfd_x002F_Y_x002B_RLeN2kdIFgkGC0KyS5B5fejzqaGVDV3GybI60rzIdApNx418rx_x002B_NpK0Egsr9WK1vC_x002F_SjrhUVWKWJYRtBn2gUDptc6ey6v641lRcgMnwoXhc9vHlDDFbviYomx0AhovvUdhHmO_x002F_7LYph3Kn3eHChrQNCfhetskYRMvbnqZCUJWVaEBf72_x002B_08DGacHzd1qyVnCoSCJ4J7qIf6bS_x002F_l8PWXX0J4LqMdXR_x002F_LMGI_x002B_21JKNlrB5VYh7ajRP94hOcXu96ut_x002B_oZvNAFPpF3mDhQR7aGJPc0miscvwccHHuyTCKfoWEPCX2pVeQAXEWUcBvZX0IKmIr_x002F_QgVn9gEImrowoSoQFfWP7UvxK29c5TLiM8kJVYLuPZ1iTxQGeOVa1ERA2R65HdvtMK5E_x002B_OiekEtagY93AjwJexEeLKVDUH9pyVXMqWIowGkaxKnCeB2_x002F_WQzXpSnidNl7iY3yBHjk1bR1ixiRrYXg3Qg9ntE6PdgfW_x002F_gkODbjsyS9Uvo30SyRhmsTwuJXiqfskzsF6zR3mkzz1XZ30iT_x002B_fFu5EKSd7mklhFBzhd2L0oX7p_x002F_VAvQ_x002F_Ec6jtdzQ5myBQEaIiUc24thvL6wurbUUMNduFkLLAE6XQyjvcjv8ERMnZdoWgULRG3nzDQ9647LGnEZ5vAO8QWGyBQXFdqqsF8hgGWQWdnIuagLpGT7_x002B_tqBYeoUScppVU0NqUQx8eRtlGoUzg3YRX1tlyJTD_x002B_GK8sbeCNYaQatg_x002B_qnxiDstKFqmRepqUyjz6GQzB105IjpksrE6XTN3Mfb1I_x002F_RuxDKTBjyo_x002F_NoJ_x002B_5cFuRXuXiMkBjVtrcs6Lm2QedC4oEjG4vm4Y_x002F_TD6fw9koWUB8QLZ9FJbHWSeQuTDdcO257hFGRa2CIORp_x002F_MXzJ6ooDEbXBcGtcmCKw43YZim7icYmZVsJxmPlYOpRkFO1SZJ9Wx36DEpJfNe1ljxLogjes9_x002B_x9GtEMYi1zJSLyPJBhfdFyuzWNP7AebLXbYpez2JYTM_x002F_OzSc6axto1TMyL_x002F_jySRJrE5EFurWKThNzlccUlaG7AbnSHTuBWgDPFvIyoZtN2CGjOPTcc_x002B_GjgA0jI54mhgKq7uEA8aj0snVb3gBAF6oavJEwUcabov3HpqgIhWIpiOC_x002F_BXMPXCzk_x002F_IIAVwWbKz7WZyQMfddY2v9lQdNW8QlUwZDrv2o9FCOgXKGW2IaX6Yo2FksEpBfzELzGZE5kX1AXTWcLVf166h3SsGiBlpKE8xvFROUCfmwUfdcKMj_x002F_7NvEJyDWyZxo2Kzm0e_x002B_HlriuTEpQgrI7ewF50RLSKWZQLMvKQQTBGtw9ThVZVMYdvRkBKY6Dc_x002F_wgWHFfvcWbNMccPQPfCR8s_x002B_Qui8mJ7o7gywZtziaGYt9olEA8bEdlmF_x002B_PjjA_x002F_0sa1u2DnFPhIKyRz08kj8lZ54XqlLMmpUlfT7c5dzAMotPyGtTVz8nnyiscmRE3hfZP0Dul2VsAeRPe1Pu8TAHEmQC7vI3mE0JxD2dTh7zWAdj6WJVDpqqO3k8JDlhW8axtRo78wQyHWSjpTn1kLhg6vYhDQv5TVZgnJGYqVOC33196eUCvzSgqNTt2mVADA0XukkIvtABoYIJZStnR26_x002F_QDpvmGpIbUUQ47cazadX5EeyBbJTAeIYZ6GmKF_x002F_cogiatcWMcYAC6_x002B_Ebc7_x002B_gpetf6yI2Jw7e9KBTBtmGwrSHIpyeGdD_x002F_u5RB_x002B_1xwkAM4sPmm_x002F_jRzG6oKBuIkG0jqFNtEI9ZI7ziha6X9awDABJVu5zKejXtQWw492Q4Cj6LDoYIchKXRoeFZrCcoK0wfiVRAxEwGL5E7Z4nCX8xEGhD9V_x002F_BGT1LK1W_x002F_p9NHhR2_x002F_oFUwcvxFKIOx5REL9SiG5hIqPli86v5K_x002F_xtKwuvVpKaiL1gdEXVg5kqd_x002F_i_x002F_GduEgqTmTFGsIzVWqbDFEJsG7n44DfGGjYr_x002F_udkb4O8_x002B_AXQxG_x002F_QTT7Zxy3janZ49jO71MrAox070GJjdzy4XlZNLRUFjJ3t5B11jKm3PHKAevN3HeXWs4FiwBEGstwBWLj9XmpiErcayKpTq7LHNNs7ZZQ959nyzatBY6AHFL12gS5nKtFNhxMBhvWaD9LnBdlqXju07b1WzvRxh0FrDRr_x002F_1MtPpNM4veJKdD_x002B_uyqtn1Enk4VUTBZU3pDp8ko4tdQQSj1biSci_x002B_Mdan8HnDsC7OaUOzMI_x002B_EEi1mYuHy4zjWeeQWb32OtV1vrsCqXayGLovLzrwrIKNOaC_x002B_HzaraHIxeeyA8lD86Sdj_x002F_w7_x002B_tpfuL2Y8NByRXlRJdqwxQOpNEo3zfGjgm0wZcr6rTdy4DHcx8Z40QZ2i6xSOuakfaH1ltQIzh6ZK9xvz52V1VS6J4vFUsnU9spiRl3KAoaA6DUNaMjSsjuu9qLMltS9l0ieArMAIOi4YEAPYkU_x002B_HszA3jw8t784ko8MP3YAghc2iZo80XEDjulgIZp0Vl0BAZsINkDsF_x002B_7scZwln_x002F_PCgBZEAEcf9Lwmm_x002F_RBeyGE_x002F_GzVPGQWsK7GO4OIshR9PtjioRUVFNTwPJuGJlLb0idbg67BIPXWU9J5yMyM9B9o8_x002B_</value>
+    </Resources>
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>986c8f53632b43c4beef2e2faa23f0c6</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="16" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="23">
+        <PageHeaderBand1 Ref="17" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,1.4</ClientRectangle>
+          <Components isList="true" count="1">
+            <Panel1 Ref="18" type="Panel" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,19.05,1.3</ClientRectangle>
+              <Components isList="true" count="2">
+                <Text1 Ref="19" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>4.8,0.4,10.25,0.77</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9,Bold</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text1</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="18" />
+                  <Text>АЖИЛТАН, АЛБА ХААГЧИЙН ДЭЛГЭРЭНГҮЙ АНКЕТ</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text1>
+                <Text11 Ref="20" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>17,0,1.88,0.53</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,10</Font>
+                  <Guid>0f6aee418b6a4093a75097c410bdd747</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>2,2,2,2</Margins>
+                  <Name>Text11</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="18" />
+                  <Text>НУУЦ</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text11>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <Name>Panel1</Name>
+              <Page isRef="16" />
+              <Parent isRef="17" />
+            </Panel1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <PrintOn>OnlyFirstPage</PrintOn>
+        </PageHeaderBand1>
+        <PageHeaderBand2 Ref="21" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.6,19,17.2</ClientRectangle>
+          <Components isList="true" count="1">
+            <Panel2 Ref="22" type="Panel" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,19,17.2</ClientRectangle>
+              <Components isList="true" count="44">
+                <Text4 Ref="23" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,1.8,3.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>586f4f32a7d04d079bb7fb3564149b23</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text4</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Эцэг(эх)-ийн нэр:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text4>
+                <Text14 Ref="24" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,1.2,3.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>794b0c5f295f490cb15ae660ce6d129a</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text14</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Ургийн овог:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text14>
+                <Text15 Ref="25" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,3,3.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>a64ad83d08014b37a575ba541cf7f98d</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text15</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Төрсөн он:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text15>
+                <Text19 Ref="26" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,3.6,3.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>d4b3398e59294f13951efc117df56d64</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text19</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Үндэс, угсаа:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text19>
+                <Text20 Ref="27" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,4.8,3.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>713d1dd014594875a413bac4dff88b0b</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text20</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Боловсрол:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text20>
+                <Text22 Ref="28" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.2,1.8,4.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>9928c7b896bf4e28a9b8eb01e22d54a1</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text22</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonLastName}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text22>
+                <Text23 Ref="29" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.2,1.2,4.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>f6b17433738340ba8a0e1d2bbe273463</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text23</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonMiddleName}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text23>
+                <Text24 Ref="30" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.2,3,4.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>e1d6097ff62749239823619d3ca17280</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text24</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonBirthDate}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text24>
+                <Text27 Ref="31" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.2,3.6,4.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>fcde304fb7c74f60a336afd4a5fcebfa</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text27</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonEthnicTitle}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text27>
+                <Text28 Ref="32" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.2,4.8,4.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>0ad8a66e9be84564bfdbb896d366029a</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text28</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonEducationLevelTitle}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text28>
+                <Text32 Ref="33" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,2.4,3.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>0dc28bcf7ecb496f8cc1665c300f37d7</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text32</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Өөрийн нэр:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text32>
+                <Text34 Ref="34" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,4.2,3.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>ead341fd65e444d1a0f56571710756ce</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text34</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Хүйс:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text34>
+                <Text36 Ref="35" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,6.6,3.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>b8115286f1a149ba968690f4821c9221</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text36</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Ам бүлийн тоо:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text36>
+                <Text37 Ref="36" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>7.6,0.6,3.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>b77cb7c5e39649309f0e3f606a6779e2</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text37</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Төрсөн газар:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text37>
+                <Text40 Ref="37" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.2,2.4,4.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>e3587d52e0bd4ba6a095ac8dd4eef511</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text40</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonFirstName}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text40>
+                <Text42 Ref="38" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.2,4.2,4.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>bfb93bf83c774b47b449a01ac4101c48</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text42</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonGender}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text42>
+                <Text43 Ref="39" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,1.2,4.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>f1125d91e44249d19c21985f7b9cfc11</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text43</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonBirthDistrictName}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text43>
+                <Text44 Ref="40" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.2,6.6,4.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>a59028eee14543e28925f9df7af96a56</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text44</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonCountFamily}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text44>
+                <Text45 Ref="41" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,0.6,4.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>99d0262e08f84df0b910019bd6964939</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text45</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonBirthCityName}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text45>
+                <Panel5 Ref="42" type="Panel" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>15.6,0.6,3.4,6.6</ClientRectangle>
+                  <Components isList="true" count="1">
+                    <Image1 Ref="43" type="Image" isKey="true">
+                      <Border>None;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0.2,0.2,3,4</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <ImageURL>{people.PersonImageSource}</ImageURL>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Image1</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="42" />
+                      <Stretch>True</Stretch>
+                      <VertAlignment>Center</VertAlignment>
+                    </Image1>
+                  </Components>
+                  <Conditions isList="true" count="0" />
+                  <Name>Panel5</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                </Panel5>
+                <Text17 Ref="44" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0.6,3.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>4e1d850ac707457e8a38d310c166f0a9</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text17</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Регистрийн дугаар:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text17>
+                <Text25 Ref="45" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.2,0.6,4.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>33d7376420ee4223ae83b185c2f92d79</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text25</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonRegisterNumber}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text25>
+                <Text2 Ref="46" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>7.6,1.2,3.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>54c63303d5254071a4759c1f2769fb10</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text2</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text2>
+                <Text5 Ref="47" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>7.6,1.8,3.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>398d8d28a2ba4cd1a9573d04e154c9d1</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text5</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Үндсэн захиргаа:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text5>
+                <Text6 Ref="48" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,2.4,4.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>e128d44c235449f49f22fa4cf0b873da</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text6</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonBasicDistrictName}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text6>
+                <Text7 Ref="49" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,1.8,4.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>a9813cb6ff5c4ce6bf9b852f827c21a9</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text7</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonBasicCityName}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text7>
+                <Text8 Ref="50" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>7.6,2.4,3.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>5ce6a849f6744da998a20ec84756aa8f</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text8</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text8>
+                <Text16 Ref="51" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>7.6,3,3.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>d7c68fe6bc6d40959b3e521e61e707cf</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text16</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Оршин суугаа хаяг:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text16>
+                <Text18 Ref="52" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,3.6,4.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>3f12e7ac75194077ba21b192a67a7f55</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text18</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonAddressDistrictName}, {people.PersonAddressHorooName}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text18>
+                <Text26 Ref="53" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,3,4.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>333114e591644541bfaca949354f0354</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text26</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonAddressCityName}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text26>
+                <Text38 Ref="54" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>7.6,3.6,3.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>a07f6c80f4ba443986a310a4f94383b8</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text38</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text38>
+                <Text46 Ref="55" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,4.2,4.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>d531dfd334914533b94ad03f5857cdd7</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text46</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonAddress}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text46>
+                <Text82 Ref="56" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>7.6,4.2,3.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>57ecb4baa4c941828dc82a23136b336f</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text82</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text82>
+                <Text35 Ref="57" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>7.6,4.8,3.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>ae369226f25f48c8a665bf03c77d5df8</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text35</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Гар утас:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text35>
+                <Text83 Ref="58" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,4.8,4.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>a28f51cea87e462b81becaed2cdaf00c</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text83</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonContactMobilePhone}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text83>
+                <Text84 Ref="59" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>7.6,5.4,3.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>d991a3d826ef4c82807d17ca61073c01</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text84</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Ажлын утас:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text84>
+                <Text85 Ref="60" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,5.4,4.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>feae38cedcb84e8385e500716e151fb5</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text85</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonContactWorkPhone}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text85>
+                <Text89 Ref="61" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>7.6,6.6,8,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>286c596a082d4a429207b1d8ce886d6f</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text89</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Цэргийн алба хаасан эсэх: {people.PersonIsSoldiering}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text89>
+                <Text86 Ref="62" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>7.6,6,3.4,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>15741bc9525e42038592d5d8f11af3a4</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text86</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Цахим шуудан:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text86>
+                <Text87 Ref="63" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,6,4.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>59fbffe420874d28b749d5f980443ff2</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text87</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.PersonContactEmail}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text87>
+                <Text21 Ref="64" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,5.4,3.2,1.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>ecf817505edb47bbbb0334af82ed8440</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text21</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>Мэргэжил:</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text21>
+                <Text31 Ref="65" type="Text" isKey="true">
+                  <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>3.2,5.4,4.4,1.2</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>51923b2506054bc398f80049be5895a7</Guid>
+                  <Margins>5,1,1,1</Margins>
+                  <Name>Text31</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>{people.Profession}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <Type>Expression</Type>
+                </Text31>
+                <Text3 Ref="66" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0,19,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Arial,9</Font>
+                  <Guid>d77879d6142e48a6a23e6483e65855b2</Guid>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text3</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                  <Text>1. ХУВЬ ХҮНИЙ ТАЛААРХ МЭДЭЭЛЭЛ</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text3>
+                <Panel3 Ref="67" type="Panel" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <CanGrow>True</CanGrow>
+                  <ClientRectangle>0,7.8,19,9.4</ClientRectangle>
+                  <Components isList="true" count="52">
+                    <Text108 Ref="68" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,0.6,4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>ed1eb6198ca74aa5bd41990433ea00c9</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text108</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Байгууллагын нэр:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text108>
+                    <Text88 Ref="69" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,1.2,4,1.2</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>443c2093270d403c9abc48b0a5b21f2f</Guid>
+                      <Margins>5,1,5,1</Margins>
+                      <Name>Text88</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Нэгжийн нэр:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                    </Text88>
+                    <Text107 Ref="70" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,3,4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>7508c7520c144554ad2bcd6c87b81115</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text107</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Зэрэг дэв:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text107>
+                    <Text109 Ref="71" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>4,3,5.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>794bdadcd04b48c79c597078f311fafc</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text109</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{people.PositionDegreeTitle}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                      <Type>DataColumn</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text109>
+                    <Text110 Ref="72" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>9.4,3,4.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>ceca2b8165414c8eac1d3044fd3bd277</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text110</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Зэрэг дэвийн нэмэгдэл:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text110>
+                    <Text111 Ref="73" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>13.8,3,5,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>2fb891b772014a8ebf1a7e09a16aa090</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text111</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{salary.SalaryDegreeTitle}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>DataColumn</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text111>
+                    <Text92 Ref="74" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,3.6,4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>21393b9c0534424285ab855e982bae93</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text92</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Үндсэн цалин:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text92>
+                    <Text93 Ref="75" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>4,3.6,5.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>1bf42c3ad4bb4e2699742cbaeff3403b</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text93</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{salary.SalaryValue}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>DataColumn</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text93>
+                    <Text97 Ref="76" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>9.4,3.6,4.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>d1cd622e5ad74631acd6d4fa927612bf</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text97</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Онцгой нөхцлийн нэмэгдэл:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text97>
+                    <Text98 Ref="77" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>13.8,3.6,5,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>b3ab2117641d4abab6779c3baa7d0ea6</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text98</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{salary.SalaryConditionTitle}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>DataColumn</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text98>
+                    <Text100 Ref="78" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,4.2,4,1</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>d5b1786ff30c4297b0e31e8b2755ad9b</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text100</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Төрийн алба хаасан хугацааны нэмэгдэл:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text100>
+                    <Text101 Ref="79" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>4,4.2,5.4,1</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>a12d019ff8aa4a928576b85aa5488026</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text101</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{salary.SalaryGovTitle}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                      <Type>DataColumn</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text101>
+                    <Text104 Ref="80" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>9.4,4.2,4.4,1</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>31b48f7354fb47249e5877792b116aa1</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text104</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Эрдмийн зэрэг, цолны нэмэгдэл:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text104>
+                    <Text106 Ref="81" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>13.8,4.2,5,1</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>8552d810a7f9484981b4c2945f882330</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text106</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{salary.SalaryEduTitle}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>DataColumn</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text106>
+                    <Text112 Ref="82" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,5.2,9.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>6476acec81c64aff98e5f65800c3b759</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text112</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Нийт цалингийн нэмэгдлийн хувь: {salary.SalarySumPercent}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text112>
+                    <Text56 Ref="83" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,6.4,6.2,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>70515ec20bfe4db68b52f4ef39692c9d</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text56</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Ажиллаж эхэлсэн огноо:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text56>
+                    <Text113 Ref="84" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>6.2,6.4,6.2,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>c76bc9c8483d4198ac49e25dc9151a72</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text113</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Нийт ажилласан жил:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text113>
+                    <Text114 Ref="85" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>12.4,6.4,6.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>31298e206b4849379e78e06816ec622c</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text114</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Нөхөн тооцуулсан хугацаа:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text114>
+                    <Text115 Ref="86" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,7,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>3815d67f4d364f9ab58475999651a740</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text115</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Улсад:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text115>
+                    <Text116 Ref="87" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>3.4,7,2.8,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>e41a2fa2d78f4a75b82da62c712c6389</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text116</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{general.JobFirstDate}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text116>
+                    <Text10 Ref="88" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,7.6,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>91475276b2934401a808ab313bf238e9</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text10</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>АТГ-т:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text10>
+                    <Text12 Ref="89" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>3.4,7.6,2.8,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>7f22fccd99b94f7eb8b4628d8b1cff66</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text12</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{general.JobFirstATGDate}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text12>
+                    <Text13 Ref="90" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,8.2,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>1a828a9a83f141e1aa2c1c8671e4eb03</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text13</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Цэргийн албанд:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text13>
+                    <Text33 Ref="91" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>3.4,8.2,2.8,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>b4da6f4caa2c4a58a9e0ffd669132301</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text33</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{general.JobFirstMilitaryDate}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text33>
+                    <Text49 Ref="92" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,8.8,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>536cfacd4ec04ad6b09c074b53af6c0c</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text49</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Аж ахуйн нэгжид:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text49>
+                    <Text50 Ref="93" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>3.4,8.8,2.8,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>a7c4a8718f014adbab3780073c62f9ab</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text50</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{general.JobFirstCompanyDate}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text50>
+                    <Text57 Ref="94" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>6.2,7,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>571521c6c56e490fabf2f5ba458e76e4</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text57</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Улсад:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text57>
+                    <Text58 Ref="95" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>9.6,7,2.8,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>d86f024602cd4ac3bdb1ed29304b066d</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text58</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{general.JobYearsAll}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text58>
+                    <Text117 Ref="96" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>6.2,7.6,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>83b22bf645b84d01831efc790537286e</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text117</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>АТГ-т:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text117>
+                    <Text118 Ref="97" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>9.6,7.6,2.8,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>880e308ce61342f6ac92c480ae7e70d3</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text118</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{general.JobYearsOrgan}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text118>
+                    <Text119 Ref="98" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>6.2,8.2,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>ea53ede472c94e2e9a9b641da20b4d24</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text119</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Цэргийн албанд:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text119>
+                    <Text120 Ref="99" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>9.6,8.2,2.8,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>27249579e9bb4549972016403227e9cc</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text120</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{general.JobYearsMilitary}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text120>
+                    <Text121 Ref="100" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>6.2,8.8,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>7edfb8aff2264b939ddb1a724fd4ace9</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text121</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Аж ахуйн нэгжид:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text121>
+                    <Text122 Ref="101" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>9.6,8.8,2.8,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>a0a3ff07523d4542a300fddfc2e5cf94</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text122</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{general.JobYearsCompany}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text122>
+                    <Text123 Ref="102" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>12.4,7,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>28db589d99284e39bbc92278bc7859f5</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text123</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Улсад:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text123>
+                    <Text124 Ref="103" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>15.8,7,3,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>67d860513d0741f68154d98a6e441a96</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text124</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{general.JobYearsNohon}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text124>
+                    <Text125 Ref="104" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>12.4,7.6,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>5410ca8b58d442e4b80d842bb2b4f8c1</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text125</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text125>
+                    <Text126 Ref="105" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>15.8,7.6,3,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>7642216584e04bc4b62655bedbe6989e</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text126</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text126>
+                    <Text127 Ref="106" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>12.4,8.2,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>030aa81efbfc481c96d25282b6818df5</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text127</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text127>
+                    <Text128 Ref="107" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>15.8,8.2,3,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>7c850c08643548008a0953a3fcb06f64</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text128</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text128>
+                    <Text129 Ref="108" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>12.4,8.8,3.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>f8d53d2a94f94319a294abd880bc590a</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text129</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text129>
+                    <Text130 Ref="109" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>15.8,8.8,3,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>3b90eb915a2a400b8df38cfddb9c4193</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text130</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text130>
+                    <Text171 Ref="110" type="Text" isKey="true">
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,0,19,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>0492848f40404b1e90585cddac35281a</Guid>
+                      <HorAlignment>Center</HorAlignment>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text171</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>2. АЖИЛ ЭРХЛЭЛТ</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text171>
+                    <Text150 Ref="111" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>4,0.6,5.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>517ba63337f24cc89ad0f03958285684</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text150</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Авлигатай тэмцэх газар</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text150>
+                    <Text172 Ref="112" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>9.4,0.6,4.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>a54a4b7721614a7a80d39f0b68922a51</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text172</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Албан тушаалын ангилал:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text172>
+                    <Text173 Ref="113" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>13.8,0.6,5,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>485e7975f1974184bae867fa3a093384</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text173</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{people.PositionClassTitle}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                      <Type>DataColumn</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text173>
+                    <Text90 Ref="114" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>4,1.2,5.4,1.2</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>8d9e6ca4d7c040e19560326b49938fe3</Guid>
+                      <Margins>5,1,5,1</Margins>
+                      <Name>Text90</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{people.DepartmentFullName}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                      <Type>Expression</Type>
+                    </Text90>
+                    <Text91 Ref="115" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>9.4,1.2,4.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>dd7f79cd09104454b9440fe160482efe</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text91</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Албан тушаалын зэрэглэл:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text91>
+                    <Text94 Ref="116" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>13.8,1.2,5,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>1fa64ac0ecfe446dad0bc0c4b18a33c8</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text94</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{people.PositionRankTitle}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                      <Type>DataColumn</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text94>
+                    <Text95 Ref="117" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>9.4,1.8,4.4,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>ace3543714084311be780d2f55efb2b9</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text95</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>Томилогдсон огноо:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text95>
+                    <Text96 Ref="118" type="Text" isKey="true">
+                      <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>13.8,1.8,5,0.6</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>Arial,9</Font>
+                      <Guid>e9e988b70f244a7f99d427cb71428578</Guid>
+                      <Margins>5,1,1,1</Margins>
+                      <Name>Text96</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                      <Text>{people.EmployeeStartDate}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>DataColumn</Type>
+                      <VertAlignment>Center</VertAlignment>
+                    </Text96>
+                    <Panel4 Ref="119" type="Panel" isKey="true">
+                      <Brush>Transparent</Brush>
+                      <CanGrow>True</CanGrow>
+                      <ClientRectangle>0,2.4,19,0.6</ClientRectangle>
+                      <Components isList="true" count="4">
+                        <Text99 Ref="120" type="Text" isKey="true">
+                          <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                          <Brush>Transparent</Brush>
+                          <CanGrow>True</CanGrow>
+                          <ClientRectangle>0,0,4,0.6</ClientRectangle>
+                          <Conditions isList="true" count="0" />
+                          <Font>Arial,9</Font>
+                          <GrowToHeight>True</GrowToHeight>
+                          <Guid>6a2418a360614a8e94ee625ec9b33663</Guid>
+                          <Margins>5,1,1,1</Margins>
+                          <Name>Text99</Name>
+                          <Page isRef="16" />
+                          <Parent isRef="119" />
+                          <Text>Албан тушаал:</Text>
+                          <TextBrush>Black</TextBrush>
+                          <Type>Expression</Type>
+                          <VertAlignment>Center</VertAlignment>
+                        </Text99>
+                        <Text102 Ref="121" type="Text" isKey="true">
+                          <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                          <Brush>Transparent</Brush>
+                          <CanGrow>True</CanGrow>
+                          <ClientRectangle>4,0,5.4,0.6</ClientRectangle>
+                          <Conditions isList="true" count="0" />
+                          <Font>Arial,9</Font>
+                          <Guid>83ee1356b3e947df820b044a04774a0f</Guid>
+                          <Margins>5,1,1,1</Margins>
+                          <Name>Text102</Name>
+                          <Page isRef="16" />
+                          <Parent isRef="119" />
+                          <Text>{people.PositionFullName}</Text>
+                          <TextBrush>Black</TextBrush>
+                          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                          <Type>DataColumn</Type>
+                          <VertAlignment>Center</VertAlignment>
+                        </Text102>
+                        <Text103 Ref="122" type="Text" isKey="true">
+                          <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                          <Brush>Transparent</Brush>
+                          <CanGrow>True</CanGrow>
+                          <ClientRectangle>9.4,0,4.4,0.6</ClientRectangle>
+                          <Conditions isList="true" count="0" />
+                          <Font>Arial,9</Font>
+                          <GrowToHeight>True</GrowToHeight>
+                          <Guid>b1f7004f4c854fc793789fd0a34ae953</Guid>
+                          <Margins>5,1,1,1</Margins>
+                          <Name>Text103</Name>
+                          <Page isRef="16" />
+                          <Parent isRef="119" />
+                          <Text>Тушаалын дугаар:</Text>
+                          <TextBrush>Black</TextBrush>
+                          <Type>Expression</Type>
+                          <VertAlignment>Center</VertAlignment>
+                        </Text103>
+                        <Text105 Ref="123" type="Text" isKey="true">
+                          <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+                          <Brush>Transparent</Brush>
+                          <CanGrow>True</CanGrow>
+                          <ClientRectangle>13.8,0,5,0.6</ClientRectangle>
+                          <Conditions isList="true" count="0" />
+                          <Font>Arial,9</Font>
+                          <GrowToHeight>True</GrowToHeight>
+                          <Guid>f260a5023a9d42d5ae6822a696cac922</Guid>
+                          <Margins>5,1,1,1</Margins>
+                          <Name>Text105</Name>
+                          <Page isRef="16" />
+                          <Parent isRef="119" />
+                          <Text>{people.EmployeeStartOrderNo}</Text>
+                          <TextBrush>Black</TextBrush>
+                          <Type>DataColumn</Type>
+                          <VertAlignment>Center</VertAlignment>
+                        </Text105>
+                      </Components>
+                      <Conditions isList="true" count="0" />
+                      <Name>Panel4</Name>
+                      <Page isRef="16" />
+                      <Parent isRef="67" />
+                    </Panel4>
+                  </Components>
+                  <Conditions isList="true" count="0" />
+                  <Guid>17f1c982eb0b4e52a7dbeb1b7ab9ad57</Guid>
+                  <Name>Panel3</Name>
+                  <Page isRef="16" />
+                  <Parent isRef="22" />
+                </Panel3>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <Guid>53b54190247544b39205b35e4df0fe3c</Guid>
+              <Name>Panel2</Name>
+              <Page isRef="16" />
+              <Parent isRef="21" />
+            </Panel2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand2</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <PrintOn>OnlyFirstPage</PrintOn>
+        </PageHeaderBand2>
+        <PageFooterBand1 Ref="124" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,60.14,19,0.8</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text78 Ref="125" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.4,0.06,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text78</Name>
+              <Page isRef="16" />
+              <Parent isRef="124" />
+              <Text>{Today}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="126" type="CustomFormat" isKey="true">
+                <StringFormat>yyyy-MM-dd</StringFormat>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text78>
+            <Text141 Ref="127" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17,0.06,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>1ea753083bf5429dacf8343e28d0eb53</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text141</Name>
+              <Page isRef="16" />
+              <Parent isRef="124" />
+              <Text>{Time}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="128" type="TimeFormat" isKey="true">
+                <StringFormat>HH:mm:ss</StringFormat>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text141>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+        </PageFooterBand1>
+        <HeaderBand1 Ref="129" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,20.6,19,1</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text29 Ref="130" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,18.92,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>edd1f9cdd47944b9b2fa451e9462e6ac</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="16" />
+              <Parent isRef="129" />
+              <Text>Ажил эрхлэлтийн байдал:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text29>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>9b911bb1f6724b74b3b4f85926ca0d29</Guid>
+          <Name>HeaderBand1</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <PrintOn>OnlyFirstPage</PrintOn>
+        </HeaderBand1>
+        <DataBand1 Ref="131" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,22.4,19,0.6</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text39 Ref="132" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e44ae6de264845c6b4ec30579d089f39</Guid>
+              <Margins>5,1,1,1</Margins>
+              <Name>Text39</Name>
+              <Page isRef="16" />
+              <Parent isRef="131" />
+              <Text>{job.RowNum}.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text41 Ref="133" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.2,0,13.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>93f313279b6b4260afcd30674b4d2fbe</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>5,1,1,1</Margins>
+              <Name>Text41</Name>
+              <Page isRef="16" />
+              <Parent isRef="131" />
+              <Text>{job.JobOrganTitle}, {job.JobDepartmentTitle}, {job.JobPositionTitle}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text47 Ref="134" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.6,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>9ef87f6830154c67a5f958cd053027ad</Guid>
+              <Margins>5,1,1,1</Margins>
+              <Name>Text47</Name>
+              <Page isRef="16" />
+              <Parent isRef="131" />
+              <Text>{job.JobDateRange}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>job</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>3fb99d840630445684682df4a48d8a9b</Guid>
+          <Name>DataBand1</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <HeaderBand7 Ref="135" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,23.8,19,1</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text30 Ref="136" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,18.92,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>640a9b8e36af45ee814409f90ff746a9</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="16" />
+              <Parent isRef="135" />
+              <Text>Ажилласан жил завсардсан байдал:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text30>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>2bc424cbdea84c95adf5fa32aebe37d4</Guid>
+          <Name>HeaderBand7</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <PrintOn>OnlyFirstPage</PrintOn>
+        </HeaderBand7>
+        <DataBand8 Ref="137" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,25.6,19,0.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text66 Ref="138" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>7609eef4b71140e79ca7b33916db522e</Guid>
+              <Margins>5,1,1,1</Margins>
+              <Name>Text66</Name>
+              <Page isRef="16" />
+              <Parent isRef="137" />
+              <Text>{Line}.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text66>
+            <Text67 Ref="139" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.2,0,17.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>6dcf5f11aeea4eef99b76067e570f078</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>5,1,1,1</Margins>
+              <Name>Text67</Name>
+              <Page isRef="16" />
+              <Parent isRef="137" />
+              <Text>{jobabsent.JobAbsentStart} - {jobabsent.JobAbsentEnd} -ний хугацаанд {jobabsent.JobAbsentMonthDay}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text67>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>jobabsent</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>7b4444cad0af410b80d0be62ca50796d</Guid>
+          <Name>DataBand8</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand8>
+        <HeaderBand9 Ref="140" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanBreak>True</CanBreak>
+          <ClientRectangle>0,27,19,1</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text48 Ref="141" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,18.92,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>bde616489c004e9ea27496ed51e1b293</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="16" />
+              <Parent isRef="140" />
+              <ShrinkFontToFit>True</ShrinkFontToFit>
+              <Text>Зэрэг дэв олгогдсон байдал:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text48>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>26c2c2d7a9b64384965dcdf889c2b21e</Guid>
+          <Name>HeaderBand9</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <PrintIfEmpty>True</PrintIfEmpty>
+          <PrintOn>OnlyFirstPage</PrintOn>
+          <SkipFirst>False</SkipFirst>
+        </HeaderBand9>
+        <DataBand2 Ref="142" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,28.8,19,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text70 Ref="143" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.2,0,18.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>ab6f9fdbabd44659b43a538ecbf6dc18</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text70</Name>
+              <Page isRef="16" />
+              <Parent isRef="142" />
+              <Text>{Line}. {posrank.PosRankTitle}, Тушаалын дугаар: {posrank.PosNumber}, {posrank.PosDate}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text70>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>posrank</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>cd6ec918eea946f7be8b0c95258cafe1</Guid>
+          <Name>DataBand2</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+        <HeaderBand3 Ref="144" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,30.2,19,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text72 Ref="145" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>05f551018fa8429f8bdf2e0b5e83fe3a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text72</Name>
+              <Page isRef="16" />
+              <Parent isRef="144" />
+              <Text>3. БОЛОВСРОЛ, МЭРГЭЖИЛ ДЭЭШЛҮҮЛСЭН БАЙДАЛ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text72>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>ef02e126aef944f6a438ddabe4f2db53</Guid>
+          <Name>HeaderBand3</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+        </HeaderBand3>
+        <DataBand3 Ref="146" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,31.8,19,0.6</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text9 Ref="147" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>72899211ba73474189ebd4b650a20044</Guid>
+              <Margins>5,1,1,1</Margins>
+              <Name>Text9</Name>
+              <Page isRef="16" />
+              <Parent isRef="146" />
+              <Text>{Line}.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text51 Ref="148" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.2,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>9a28f6b0029443d790c813b1f7dcbc0d</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>5,1,1,1</Margins>
+              <Name>Text51</Name>
+              <Page isRef="16" />
+              <Parent isRef="146" />
+              <Text>{education.EducationDateStart} {education.EducationDateEnd !="" ? " - "+education.EducationDateEnd : ""}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text51>
+            <Text52 Ref="149" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>16.4,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>f2c067f82ca44d9bb7e026014575202f</Guid>
+              <Margins>5,1,1,1</Margins>
+              <Name>Text52</Name>
+              <Page isRef="16" />
+              <Parent isRef="146" />
+              <Text>{education.EducationLicence}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text52>
+            <Text53 Ref="150" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.6,0,3.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>227010718e054488a160c57d6a1939ed</Guid>
+              <Margins>5,1,1,1</Margins>
+              <Name>Text53</Name>
+              <Page isRef="16" />
+              <Parent isRef="146" />
+              <Text>{education.EducationLevelTitle}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text53>
+            <Text54 Ref="151" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9,0,4.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>399a78f65ddc4116b1753ad6b07b8aa6</Guid>
+              <Margins>5,1,1,1</Margins>
+              <Name>Text54</Name>
+              <Page isRef="16" />
+              <Parent isRef="146" />
+              <Text>{education.EducationSchoolTitle}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text54>
+            <Text55 Ref="152" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13.2,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>8348c25d5f664b478766dae3f0948ae4</Guid>
+              <Margins>5,1,1,1</Margins>
+              <Name>Text55</Name>
+              <Page isRef="16" />
+              <Parent isRef="146" />
+              <Text>{education.EducationProfession}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text55>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>education</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>94428e486727417e8af462df0500eada</Guid>
+          <Name>DataBand3</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand3>
+        <HeaderBand4 Ref="153" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,33.2,19,1</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text65 Ref="154" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,18.92,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>66bb80140e594d878fa3b9d6f7eb381d</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="16" />
+              <Parent isRef="153" />
+              <Text>Сургалтад хамрагдсан байдал:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text65>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>ba1e7c4536bf46dcb2a15e291ebef210</Guid>
+          <Name>HeaderBand4</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+        </HeaderBand4>
+        <DataBand4 Ref="155" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,35,19,0.6</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text59 Ref="156" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>f46cc24fce40426abf6c3cf597a6119b</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text59</Name>
+              <Page isRef="16" />
+              <Parent isRef="155" />
+              <Text>{Line}.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text59>
+            <Text60 Ref="157" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.2,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>55437e93cf334990bf80f7c99654e8de</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text60</Name>
+              <Page isRef="16" />
+              <Parent isRef="155" />
+              <Text>{study.StudyDateStart} {study.StudyDateEnd !="" ? " - "+study.StudyDateEnd : ""}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text60>
+            <Text61 Ref="158" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>16.4,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>4cd252b759f2412db6aa3a5d6b2ebe01</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text61</Name>
+              <Page isRef="16" />
+              <Parent isRef="155" />
+              <Text>{study.StudyDay} хоног</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text61>
+            <Text62 Ref="159" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.6,0,5.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>29d0fff2af2248e5b8298016f43955da</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text62</Name>
+              <Page isRef="16" />
+              <Parent isRef="155" />
+              <Text>{study.StudyTitle}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+            </Text62>
+            <Text63 Ref="160" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.8,0,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>d5d6a3242b994da7ba2c891acf75306c</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text63</Name>
+              <Page isRef="16" />
+              <Parent isRef="155" />
+              <Text>{study.StudyCountryName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+            </Text63>
+            <Text64 Ref="161" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13.8,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>7404bd56173840f684241bbd5a61d5d4</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text64</Name>
+              <Page isRef="16" />
+              <Parent isRef="155" />
+              <Text>{study.StudyLicence}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+            </Text64>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>study</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>1b3b4c6f83ca4d20b0a8a48722b96349</Guid>
+          <Name>DataBand4</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand4>
+        <HeaderBand10 Ref="162" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanBreak>True</CanBreak>
+          <ClientRectangle>0,36.4,19,1</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text68 Ref="163" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,18.92,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>8ca465e2015042c9bb36fc7ac9d23709</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text68</Name>
+              <Page isRef="16" />
+              <Parent isRef="162" />
+              <Text>Эрдмийн зэрэг, цол:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text68>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>22474da76c674b15b508a62773ecf32e</Guid>
+          <Name>HeaderBand10</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <PrintOn>OnlyFirstPage</PrintOn>
+          <SkipFirst>False</SkipFirst>
+        </HeaderBand10>
+        <DataBand9 Ref="164" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,38.2,19,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text69 Ref="165" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.2,0,18.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>11ef508b764341ad9b53753cd82f0a87</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text69</Name>
+              <Page isRef="16" />
+              <Parent isRef="164" />
+              <Text>{Line}. {edurank.EduRankTitle}, {edurank.EduDate}, {edurank.EduNumber}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text69>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>edurank</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>ffaa63fb26764291960a6dd2aca296be</Guid>
+          <Name>DataBand9</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand9>
+        <HeaderBand5 Ref="166" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,39.6,19,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text71 Ref="167" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>0e9358ff4ed44867a4f75ac8b9dd95fc</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text71</Name>
+              <Page isRef="16" />
+              <Parent isRef="166" />
+              <Text>4. ШАГНАЛ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text71>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>8fb2a576cd274d83b77d4f9bcb10a228</Guid>
+          <Name>HeaderBand5</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+        </HeaderBand5>
+        <DataBand5 Ref="168" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,41.2,19,0.6</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text73 Ref="169" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e7fef0b160324958a72d7766262fae38</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text73</Name>
+              <Page isRef="16" />
+              <Parent isRef="168" />
+              <Text>{Line}.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text73>
+            <Text74 Ref="170" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.2,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>8f94136f68224b64b77ea438cc5cfe51</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text74</Name>
+              <Page isRef="16" />
+              <Parent isRef="168" />
+              <Text>{award.AwardDate}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text74>
+            <Text76 Ref="171" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.6,0,5,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>f08405d037bf432780f20e478285f96a</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text76</Name>
+              <Page isRef="16" />
+              <Parent isRef="168" />
+              <Text>{award.AwardRefTitle}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+            </Text76>
+            <Text131 Ref="172" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.6,0,5.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>2f973b09d3ff4289b8f1c729d962babc</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text131</Name>
+              <Page isRef="16" />
+              <Parent isRef="168" />
+              <Text>{award.AwardTitle}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+            </Text131>
+            <Text132 Ref="173" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15.8,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>4e4416d1daba4bc99831acf8af74f8ec</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text132</Name>
+              <Page isRef="16" />
+              <Parent isRef="168" />
+              <Text>{award.AwardLicence}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text132>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>award</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>21c25e1bc1d84a52a9c5d1d236825d39</Guid>
+          <Name>DataBand5</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand5>
+        <HeaderBand11 Ref="174" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,42.6,19,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text75 Ref="175" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>9069ccd0cfac48d68fbd61f3a247e6bd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text75</Name>
+              <Page isRef="16" />
+              <Parent isRef="174" />
+              <Text>5. ШИЙТГЭГДСЭН БАЙДАЛ, ГАРГАСАН ЗӨРЧИЛ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text75>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>8e002e63903d4cb1b77e60fba54d829f</Guid>
+          <Name>HeaderBand11</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+        </HeaderBand11>
+        <DataBand10 Ref="176" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,44.2,19,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text133 Ref="177" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.2,0,18.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>d700b584ff124fc4accf2c99bcaf4b34</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text133</Name>
+              <Page isRef="16" />
+              <Parent isRef="176" />
+              <Text>{Line}. {punishment.PunishmentOrderDate}, {punishment.PunishmentReason}, {punishment.PunishmentOrder}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text133>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>punishment</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>044f8942b24345ec925e6684b6c71175</Guid>
+          <Name>DataBand10</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand10>
+        <HeaderBand6 Ref="178" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,45.6,19,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text77 Ref="179" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>699de59565744658b2dedda85b43bd7f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text77</Name>
+              <Page isRef="16" />
+              <Parent isRef="178" />
+              <Text>6. ГЭР БҮЛИЙН БАЙДАЛ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text77>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>7b54439b3f534efab59647b5fde6766f</Guid>
+          <Name>HeaderBand6</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+        </HeaderBand6>
+        <DataBand6 Ref="180" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,47.2,19,0.6</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text134 Ref="181" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>0be0331d1efc44bfa61b3d6f02fa25d8</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text134</Name>
+              <Page isRef="16" />
+              <Parent isRef="180" />
+              <Text>{Line}.</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text134>
+            <Text135 Ref="182" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.2,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>d351fdd4006348b4aa72f5f145cb6b5e</Guid>
+              <HorAlignment>Width</HorAlignment>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text135</Name>
+              <Page isRef="16" />
+              <Parent isRef="180" />
+              <Text>{family.FamilyRelationTitle}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+            </Text135>
+            <Text136 Ref="183" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.2,0,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>693274209c61495d998b05262c475db8</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text136</Name>
+              <Page isRef="16" />
+              <Parent isRef="180" />
+              <Text>{family.FamilyJobPosition}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text136>
+            <Text137 Ref="184" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3.8,0,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>5e556dc43db946a2a68420bba42f907d</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text137</Name>
+              <Page isRef="16" />
+              <Parent isRef="180" />
+              <Text>{family.FamilyLastName} {family.FamilyFirstName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text137>
+            <Text138 Ref="185" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7.8,0,3.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>ec95febb357d45d480e6191ecea80909</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text138</Name>
+              <Page isRef="16" />
+              <Parent isRef="180" />
+              <Text>{family.FamilyRefTypeTitle}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+            </Text138>
+            <Text139 Ref="186" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.6,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>71fd4b8613b04a008692ea396032e035</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text139</Name>
+              <Page isRef="16" />
+              <Parent isRef="180" />
+              <Text>{family.FamilyJobOrgan}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text139>
+            <Text140 Ref="187" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17.2,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>7e52f611125e4aee82f425ecc7f8fb32</Guid>
+              <Margins>5,1,5,1</Margins>
+              <Name>Text140</Name>
+              <Page isRef="16" />
+              <Parent isRef="180" />
+              <Text>{family.FamilyAge} нас</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text140>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>family</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>2c7e10ddd7454ef0820f201f088bad87</Guid>
+          <Name>DataBand6</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand6>
+        <HeaderBand8 Ref="188" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,48.6,19,1.4</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text80 Ref="189" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.8,18.92,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>d5d64c34dbfe46f3a6bb27e9b14685f2</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text80</Name>
+              <Page isRef="16" />
+              <Parent isRef="188" />
+              <Text>Гадаад хэлний мэдлэг:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text80>
+            <Text79 Ref="190" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>d82ba517b4ff49e386a647a2a2f1b5d4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text79</Name>
+              <Page isRef="16" />
+              <Parent isRef="188" />
+              <Text>7. БУСАД ТЭМДЭГЛЭЛ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text79>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>d9c3d6a549384b5596a20bb366af0715</Guid>
+          <Name>HeaderBand8</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+        </HeaderBand8>
+        <DataBand7 Ref="191" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <CanBreak>True</CanBreak>
+          <CanShrink>True</CanShrink>
+          <ClientRectangle>0,50.8,19,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text81 Ref="192" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.2,0,18.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <Guid>ba7b3a80f168488b8d4b0362a128fa32</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text81</Name>
+              <Page isRef="16" />
+              <Parent isRef="191" />
+              <Text>{Line}. {language.LanguageTitle}, {language.LanguageLevelTitle}, {language.LanguageYears} жил</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text81>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>language</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Guid>15e24e06519f436f8fe4f306af51ee04</Guid>
+          <Name>DataBand7</Name>
+          <Page isRef="16" />
+          <Parent isRef="16" />
+          <Sort isList="true" count="0" />
+        </DataBand7>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>652713dde37d4f69ae9e7e8a5edec26d</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>11/4/2021 3:53:14 PM</ReportChanged>
+  <ReportCreated>9/2/2019 10:35:54 AM</ReportCreated>
+  <ReportFile>D:\web\www\office_iaac\print\humanres.mrt</ReportFile>
+  <ReportGuid>39efbd4a16fa4672b5088bf10a447d53</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2020.1.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

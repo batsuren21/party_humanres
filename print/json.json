@@ -1,0 +1,23 @@
+{
+"form":
+{
+"FelonyNumber":"123456789",
+"FelonySumCost":"45454545",
+ "FormSum":"15555",
+ "FormNumber":"19\/000001",
+ "NowDate":"2019-12-18",
+ "Person":"Д.Бат"
+ },
+ "cost":[
+{
+"CostRowNum":1,
+"CostTypeTitle":"Testes",
+ "CostValue":"150000",
+ "CostDescr":"Test",
+ },{
+ "CostRowNum":2,
+"CostTypeTitle":"Testes1",
+ "CostValue":"250000",
+ "CostDescr":"Test22",
+ }]
+ }

@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteRule ^process/$ module/process.php [L]
+RewriteRule ^process$  module/process.php [L]
+RewriteRule ^process/([A-Za-z0-9_]+)/$ module/process.php?action=$1 [L]
+RewriteRule ^process/([A-Za-z0-9_]+)$  module/process.php?action=$1 [L]

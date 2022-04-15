@@ -1,0 +1,22 @@
+CKEDITOR.plugins.setLang('youtube', 'mn', {
+	button : 'Youtube-ийн бичлэг оруулах', //'Embed Youtube Video ',
+	title : 'Youtube-ийн бичлэг', //'Embed Youtube Video',
+	txtEmbed : 'Энд Embed код оруулна', //'Paste Embed Code Here',
+	txtUrl : 'Youtube-ийн бичлэгийн линк', //'Paste Youtube Video URL',
+	txtWidth : 'Өргөн', //'Width',
+	txtHeight : 'Өндөр', //'Height',
+	chkRelated : 'Хамааралтай бичлэгүүдийг харуулах', //'Show suggested videos at the video\'s end',
+	txtStartAt : 'Эхлэх хугацаа (сс эсвэл мм:сс эсвэл цц:мм:сс)', //'Start at (ss or mm:ss or hh:mm:ss)',
+	chkPrivacy : 'Youtube акаунтыг идэвхгүй болгох', //'Enable privacy-enhanced mode',
+	chkOlderCode : 'Хуучин Embed код хэрэглэх', //'Use old embed code',
+	chkAutoplay: 'Автомаар эхлүүлэх', //'Autoplay',
+	noCode : 'Embed код оруулаагүй байна', //'You must input an embed code or URL',
+	invalidEmbed : 'Буруу Embed код оруулсан байна', //'The embed code you\'ve entered doesn\'t appear to be valid',
+	invalidUrl : 'Буруу линк оруулсан байна', //'The URL you\'ve entered doesn\'t appear to be valid',
+	or : 'эсвэл', //'or',
+	noWidth : 'Бичлэгийн өргөний хэмжээг оруулна уу', //'You must inform the width',
+	invalidWidth : 'Өргөний хэмжээг буруу оруулсан байна', //'Inform a valid width',
+	noHeight : 'Бичлэгийн өндрийн хэмжээг оруулна уу', //'You must inform the height',
+	invalidHeight : 'Өндрийн хэмжээг буруу оруулсан байна', //'Inform a valid height',
+	invalidTime : 'Хугацааг буруу оруулсан байна', //'Inform a valid start time'
+});

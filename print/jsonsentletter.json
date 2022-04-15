@@ -1,0 +1,24 @@
+{
+"sentletter":
+{
+"OfficeName":"Завхан аймгийн Улиастай сумын Засаг даргын Тамгын газар",
+ "SentLetterOrgTitle":"org titl",
+ "SentLetterTypeTitle":"",
+ "SentLetterRegisterDate":"2019-09-29",
+ "SentLetterRegisterNumberFull":"19-000014",
+ "SentLetterReturnNumberFull":"19-000010",
+ "SentLetterDate":"2019-09-29",
+ "SentLetterNumber":"19-455",
+ "SentLetterNumberIndex":"19",
+ "SentLetterOrganCount":"1",
+ 
+ "SentLetterPageCount":"3",
+ "SentLetterFolderCount":"2",
+ "SentLetterIntro":"Tests",
+ "SentLetterWhere":"from wewh",
+ "SentLetterWho":"",
+ "SentLetterFromPersonTitle":"to person",
+ "SentLetterReturnDate":"2019-10-14",
+ "SentLetterCreatePersonName":"sf dsf ds"
+ }
+ }

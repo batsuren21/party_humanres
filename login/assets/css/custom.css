@@ -1,0 +1,12 @@
+.modal.modal-fullscreen .modal-dialog {
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  min-width: 100%;
+}
+.modal.modal-fullscreen .modal-dialog {
+  margin: 0 !important;
+  min-width: 100%;
+  animation-duration:0.6s;
+}

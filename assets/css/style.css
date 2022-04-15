@@ -1,0 +1,102 @@
+@CHARSET "UTF-8";
+.font-10{
+	font-size: 10px !important;
+}
+.font-11{
+	font-size: 11px !important;
+}
+.font-12{
+	font-size: 12px !important;
+}
+.font-13{
+	font-size: 13px !important;
+}
+.color-gray{
+	color: rgb(90, 90, 90) !important;
+}
+.color-black{
+	color: #000000 !important;
+}
+.color-dark{
+	color: #212529 !important;
+}
+.border_right_gray{
+	border-right: 1px solid #ebedf2;
+}
+.border_bottom_gray{
+	border-bottom: 1px solid #EEEEEE;
+}
+.table-header-blue thead{
+	background-color: #b5deff;
+	font-weight: bold !important;
+}
+.table-header-blue thead th{
+	font-weight: bold !important;
+}
+.table-header-blue thead th{
+	font-weight: bold !important;
+}
+.table-header-blue tbody tr:nth-child(even){
+    background-color: #FFFFFF;
+}
+.table-header-blue tbody tr:nth-child(odd){
+    background-color: #ebf3ff;
+}
+.kt-portlet-noneshadow{
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.modal {
+  overflow-y:auto !important;
+}
+.modal-top{
+	z-index: 1053 !important;
+}
+.modal-top1{
+	z-index: 1054 !important;
+}
+#modal-backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1052;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+	opacity: 0.5;
+}
+.full_modal-dialog {
+  width: 98% !important;
+  height: 92% !important;
+  min-width: 98% !important;
+  min-height: 92% !important;
+  max-width: 98% !important;
+  max-height: 92% !important;
+  padding: 0 !important;
+}
+.select2-selection--multiple .select2-search--inline .select2-search__field {
+	width: auto !important;
+}
+.select2-container {
+	width: 100% !important;
+}
+
+.custom-file-label{
+	text-align: left !important;
+}
+select option { 
+    line-height: 20px !important;
+	padding-top: 5px !important;
+}
+.background-gray {
+	background-color: #ECECEC !important;
+}
+.status_change{
+	cursor: pointer;
+}
+body, .dataTables_wrapper, .dataTable th, .dataTable td, .form-control, .modal-title, .kt-portlet__head-title, .table {
+	color: #000000 !important;
+}
+.fullwidth .kt-form {
+    width: 90% !important;
+}

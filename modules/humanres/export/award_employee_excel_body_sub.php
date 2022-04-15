@@ -1,0 +1,25 @@
+<?php 
+$j=0;
+/****/
+$activesheet->setCellValueByColumnAndRow($j,$_row_body,$personObj->PersonLFName);
+$j++;
+/****/
+$activesheet->setCellValueByColumnAndRow($j,$_row_body,$allStatObj->PositionFullName);
+$j++;
+/****/
+$activesheet->setCellValueByColumnAndRow($j,$_row_body,$_jj);
+$j++;
+/****/
+if(isset($_awardSubList)){
+    $_parentid=0;
+    foreach ($_awardSubList as $tmp){
+        if($_parentid!=$tmp['RefAwardParentID']){
+            $_parentid=$tmp['RefAwardParentID'];
+            $activesheet->setCellValueByColumnAndRow($j,$_row_body,($allStatObj->{"Award".$tmp['RefAwardParentID']}!=""?$allStatObj->{"Award".$tmp['RefAwardParentID']}:0));
+            $j++;
+        }
+        $activesheet->setCellValueByColumnAndRow($j,$_row_body,($allStatObj->{"AwardSub".$tmp['RefAwardID']}!=""?$allStatObj->{"AwardSub".$tmp['RefAwardID']}:0));
+        $j++;
+    }
+}
+$_row_body++;

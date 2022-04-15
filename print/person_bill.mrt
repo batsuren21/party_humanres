@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <json_personholiday Ref="2" type="Stimulsoft.Report.Dictionary.StiJsonDatabase" isKey="true">
+        <Alias>json_personholiday</Alias>
+        <Key />
+        <Name>json_personholiday</Name>
+        <PathData>D:\web\www\office_iaac\print\json_personbill.json</PathData>
+      </json_personholiday>
+    </Databases>
+    <DataSources isList="true" count="5">
+      <general Ref="3" type="DataTableSource" isKey="true">
+        <Alias>general</Alias>
+        <Columns isList="true" count="2">
+          <value>OfficeName,System.String</value>
+          <value>nowdate,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>865bb72fc69d45f386e7c9315063fca8</Key>
+        <Name>general</Name>
+        <NameInSource>json_personholiday.general</NameInSource>
+      </general>
+      <maindata Ref="4" type="DataTableSource" isKey="true">
+        <Alias>maindata</Alias>
+        <Columns isList="true" count="23">
+          <value>BillID,System.String</value>
+          <value>BillPersonID,System.String</value>
+          <value>BillEmployeeID,System.String</value>
+          <value>BillRegisterDate,System.String</value>
+          <value>BillRegisterNumberYear,System.String</value>
+          <value>BillRegisterNumber,System.String</value>
+          <value>BillRegisterNumberFull,System.String</value>
+          <value>BillJobDate,System.String</value>
+          <value>BillTime,System.String</value>
+          <value>BillHolidayDay,System.String</value>
+          <value>BillValue,System.String</value>
+          <value>BillHolidayDay1,System.String</value>
+          <value>BillHolidayDay2,System.String</value>
+          <value>BillChiefPersonID,System.String</value>
+          <value>BillChiefEmployeeID,System.String</value>
+          <value>BillHumanresPersonID,System.String</value>
+          <value>BillHumanresEmployeeID,System.String</value>
+          <value>BillCreatePersonID,System.String</value>
+          <value>BillCreateEmployeeID,System.String</value>
+          <value>BillCreateDate,System.String</value>
+          <value>BillUpdatePersonID,System.String</value>
+          <value>BillUpdateEmployeeID,System.String</value>
+          <value>BillUpdateDate,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>d2da9279ded34fd2b70374eb6ae0b4b2</Key>
+        <Name>maindata</Name>
+        <NameInSource>json_personholiday.maindata</NameInSource>
+      </maindata>
+      <person Ref="5" type="DataTableSource" isKey="true">
+        <Alias>person</Alias>
+        <Columns isList="true" count="6">
+          <value>DepartmentName,System.String</value>
+          <value>DepartmentFullName,System.String</value>
+          <value>PositionName,System.String</value>
+          <value>PositionFullName,System.String</value>
+          <value>PersonLastName,System.String</value>
+          <value>PersonFirstName,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>ac85dc51d7fa4fc99391e868b58ffefc</Key>
+        <Name>person</Name>
+        <NameInSource>json_personholiday.person</NameInSource>
+      </person>
+      <personchief Ref="6" type="DataTableSource" isKey="true">
+        <Alias>personchief</Alias>
+        <Columns isList="true" count="1">
+          <value>PersonName,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>42efcb93133f4624a900031bba6c58cf</Key>
+        <Name>personchief</Name>
+        <NameInSource>json_personholiday.personchief</NameInSource>
+      </personchief>
+      <personhumanres Ref="7" type="DataTableSource" isKey="true">
+        <Alias>personhumanres</Alias>
+        <Columns isList="true" count="1">
+          <value>PersonName,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>3afc135052c347e0b1a04dafe421df76</Key>
+        <Name>personhumanres</Name>
+        <NameInSource>json_personholiday.personhumanres</NameInSource>
+      </personhumanres>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="1">
+      <value>Name=json, Alias=json, Type=Json, Content=_x0037_e1w8goiq3_x002F_o9Up0ibziQ8PD_x002F_uDEQgT09cpnwfskd388vGozs5EMkFgOD0pXwyEIQa0CaDgHsFV_x002F_8NbG5f7C4jZmWGrOPyAt3F4kAqwJZ4M8p_x002B_K71MdwFUgl1v13LP3UA5NE431VB1eGJE2Ov4nWnYaq4kPpGet0wOJKQVCDOlEDBdapfxtLA66gtaj61rmzxX3AQODuBbBMmNYDPtbfZsqX4j3HYjQViDp2HQ8e4rqyhqITpDiVY7zGK66_x002F_r39QU19t09B5fsAKQr0DzaGIg1N2ak0XU5zUq2gc3osBZAenuTvJi6nJrZiX8pks8h2J6lXZZOOpQc9LxU9VAhUv8O12oYGPgQ1oJAZlxp7O_x002F_4jsXzPI3Mpg9nE_x002F__x002F__x002B_3rLGqJpGuLLA4aYV4owr_x002F_gA_x002F_F70gvJkYKBskBk1BMQ1h_x002B_zUlRLDnjxQGtVOWxWFtAAmB5GYZzdyjZXo7rysEsZagbDbScTqx2BnJ0VoD12to_x002B_O6_x002F_fvr59dRwyGnz15GT_x002F_YucHegFcwkNSDQRHzexBv9LSkgw1Ppe8Y9Hf8Kxphxw_x003D__x003D_</value>
+    </Resources>
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>986c8f53632b43c4beef2e2faa23f0c6</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="8" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <PageHeaderBand2 Ref="9" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,12.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Panel2 Ref="10" type="Panel" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,19,11.2</ClientRectangle>
+              <Components isList="true" count="9">
+                <Text4 Ref="11" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,1.2,19,0.6</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Times New Roman,12</Font>
+                  <Guid>586f4f32a7d04d079bb7fb3564149b23</Guid>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text4</Name>
+                  <Page isRef="8" />
+                  <Parent isRef="10" />
+                  <Text>ЭЭЛЖИЙН АМРАЛТЫН ТООЦОО</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text4>
+                <Text19 Ref="12" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,3.6,19,3</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Times New Roman,12</Font>
+                  <Guid>d4b3398e59294f13951efc117df56d64</Guid>
+                  <HorAlignment>Width</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text19</Name>
+                  <Page isRef="8" />
+                  <Parent isRef="10" />
+                  <Text>{person.PersonLastName} овогтой {person.PersonFirstName} нь {person.DepartmentFullName}-н {person.PositionFullName} ажилтай байхдаа {maindata.BillJobDate}–ний өдөр хүртэлх ажилласан {maindata.BillTime} сарын хугацаанд ногдох {maindata.BillHolidayDay} ажлын өдрийн ээлжийн амралтын олговорт ногдох {maindata.BillValue} төгрөгийг авсан бөгөөд уг амралтын хугацаанаас {maindata.BillHolidayDay1} ажлын өдрийг биеэр эдэлж, {maindata.BillHolidayDay2} ажлын өдрийг биеэр эдлээгүй байгаа болно.</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <Type>Expression</Type>
+                </Text19>
+                <Text32 Ref="13" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>13,0,6,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Times New Roman,12</Font>
+                  <Guid>0dc28bcf7ecb496f8cc1665c300f37d7</Guid>
+                  <HorAlignment>Right</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text32</Name>
+                  <Page isRef="8" />
+                  <Parent isRef="10" />
+                  <Text>Ээлжийн амралт олгох зааврын 
+2 дугаар хавсралт</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text32>
+                <Text36 Ref="14" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>6.6,2.2,5.2,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Times New Roman,12</Font>
+                  <Guid>b8115286f1a149ba968690f4821c9221</Guid>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text36</Name>
+                  <Page isRef="8" />
+                  <Parent isRef="10" />
+                  <Text>Дугаар: {maindata.BillRegisterNumberFull}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                </Text36>
+                <Text14 Ref="15" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,2.2,3.4,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Times New Roman,12</Font>
+                  <Guid>794b0c5f295f490cb15ae660ce6d129a</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text14</Name>
+                  <Page isRef="8" />
+                  <Parent isRef="10" />
+                  <Text>{general.nowdate}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <Type>Expression</Type>
+                </Text14>
+                <Text1 Ref="16" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>2,7,5,1.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Times New Roman,12</Font>
+                  <Guid>c0763a8b5f554466871d352681c3e7cb</Guid>
+                  <HorAlignment>Width</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text1</Name>
+                  <Page isRef="8" />
+                  <Parent isRef="10" />
+                  <Text>Авлигатай тэмцэх газрын
+Тамгын хэлтсийн дарга,
+Эрхэлсэн комиссар 
+</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <Type>Expression</Type>
+                </Text1>
+                <Text2 Ref="17" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>2,9.2,6.6,1.4</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Times New Roman,12</Font>
+                  <Guid>e3674c7cc4bf4d9cad858455900db97a</Guid>
+                  <HorAlignment>Width</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text2</Name>
+                  <Page isRef="8" />
+                  <Parent isRef="10" />
+                  <Text>Тамгын хэлтсийн Хүний нөөцийн
+асуудал хариуцсан ахлах ажилтан</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <Type>Expression</Type>
+                </Text2>
+                <Text3 Ref="18" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,8,8,0.8</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Times New Roman,12</Font>
+                  <Guid>2cfd0ba1d227494abfbcd6f9ad0166ec</Guid>
+                  <HorAlignment>Width</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text3</Name>
+                  <Page isRef="8" />
+                  <Parent isRef="10" />
+                  <Text>/{personchief.PersonName}/ 
+</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <Type>Expression</Type>
+                </Text3>
+                <Text5 Ref="19" type="Text" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>11,9.6,8,1</ClientRectangle>
+                  <Conditions isList="true" count="0" />
+                  <Font>Times New Roman,12</Font>
+                  <Guid>e364ff9c55394cd09ba70eed42672529</Guid>
+                  <HorAlignment>Width</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text5</Name>
+                  <Page isRef="8" />
+                  <Parent isRef="10" />
+                  <Text>/{personhumanres.PersonName}/</Text>
+                  <TextBrush>Black</TextBrush>
+                  <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+                  <Type>Expression</Type>
+                </Text5>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <Guid>53b54190247544b39205b35e4df0fe3c</Guid>
+              <Name>Panel2</Name>
+              <Page isRef="8" />
+              <Parent isRef="9" />
+            </Panel2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand2</Name>
+          <Page isRef="8" />
+          <Parent isRef="8" />
+          <PrintOn>OnlyFirstPage</PrintOn>
+        </PageHeaderBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>652713dde37d4f69ae9e7e8a5edec26d</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>9/22/2021 5:23:00 PM</ReportChanged>
+  <ReportCreated>9/2/2019 10:35:54 AM</ReportCreated>
+  <ReportFile>D:\web\www\office_iaac\print\person_bill.mrt</ReportFile>
+  <ReportGuid>8085e4d1e1914f939a7853beeb7cb7e0</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2020.1.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
