@@ -17,8 +17,8 @@
                 <!--begin::Section-->
                 <div class="kt-login-v1__section">
                     <div class="kt-login-v1__info text-center">
-                    	<img src="<?=RF;?>/imgs/atg.png" alt="" width="150" />
-                        <h3 class="kt-login-v1__intro mt-2">Авлигатай тэмцэх газар</h3>
+                    	<img src="<?=__LOGO__?>" alt="" width="150" />
+                        <h3 class="kt-login-v1__intro mt-2"><?=__TITLE__?></h3>
                     </div>
                 </div>
 

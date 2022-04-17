@@ -24,7 +24,7 @@
 
 	<!--end::Layout Skins -->
 	<!-- <link rel="shortcut icon" href="<?=RF;?>/assets/media/logos/favicon.ico"/> -->
-    <link rel="shortcut icon" href="<?=RF;?>/imgs/atg.png"/>
+    <link rel="shortcut icon" href="<?=__LOGO__;?>"/>
     
     <!--begin::Page Custom Styles(used by this page) -->
     <?php 

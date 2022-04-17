@@ -36,6 +36,6 @@
     <link href="<?=RF;?>/login/assets/css/demo1/skins/brand/light.css" rel="stylesheet" type="text/css" />
     <link href="<?=RF;?>/login/assets/css/demo1/skins/aside/light.css" rel="stylesheet" type="text/css" />
     <!--end::Layout Skins -->
-    <link rel="shortcut icon" href="<?=RF;?>/imgs/atg.png"/>
+    <link rel="shortcut icon" href="<?=__LOGO__;?>"/>
 </head>
 <!-- end::Head -->

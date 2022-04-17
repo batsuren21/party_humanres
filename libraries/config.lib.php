@@ -3,7 +3,7 @@
     define("DB_USER", 'root');
     define("DB_PASSWORD", 'rtpw');
 
-    define("DB_DATABASE", '');
+    define("DB_DATABASE", 'party_office');
     define("DB_DATABASE_HUMANRES", 'party_humanres');
 
     define("MYSQL_SHOW_EXCEPTION", 1);
@@ -19,7 +19,7 @@
     define("RF_SUB",($subcount>0)?str_replace($sub[$subcount-1],"",RF):"");
     define("SYS_HOST", "http://".$_SERVER['SERVER_NAME']);
     
-    define("RF_LOGIN",SYS_HOST."/office_iaac/login");
+    define("RF_LOGIN",SYS_HOST."/github/party_humanres/login");
     define("RF_ERROR",SYS_HOST.RF."/error");
     
     if (!isset($_SESSION[RF . 'randnum'])){
