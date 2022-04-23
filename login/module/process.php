@@ -33,9 +33,9 @@
                     
                     if($employeeObj->isExist() && $employeeObj->EmployeeIsActive){
                         $encrypt_userid = Office\PasswordClass::encrypt($userObj->PersonID);
-//                         setcookie(COOKIENAME."[uid]", $encrypt_userid, COOKIE_EXPIRE_TIME, COOKIE_PATH, COOKIE_DOMAIN);
-//                         setcookie(COOKIENAME."[ltime]", time(), COOKIE_EXPIRE_TIME, COOKIE_PATH, COOKIE_DOMAIN);
-                        
+                        setcookie(COOKIENAME."[uid]", $encrypt_userid, COOKIE_EXPIRE_TIME, COOKIE_PATH, COOKIE_DOMAIN);
+                        setcookie(COOKIENAME."[ltime]", time(), COOKIE_EXPIRE_TIME, COOKIE_PATH, COOKIE_DOMAIN);
+                        /*
                         setcookie(COOKIENAME."[uid]", $encrypt_userid, [
                             'expires' => COOKIE_EXPIRE_TIME,
                             'path' => COOKIE_PATH,
@@ -52,13 +52,13 @@
                             'httponly' => false,
                             'samesite' => 'Lax',
                         ]);
-                        
+                        */
                         
                         
                         $_result =array(
                             "_state" => true,
                             "_text"=>"Амжилттай нэвтэрлээ.",
-                            "_url"=>SYS_HOST.RF 
+                            "_url"=>SYS_HOST.RF."/home"
                         );
                         header("Content-type: application/json");
                         echo json_encode($_result);

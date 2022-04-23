@@ -4,12 +4,21 @@
     if($_priv_reg){
         $_id=isset($_POST['id'])?$_POST['id']:0;
         $_icon=$_id>0?"flaticon2-edit":"flaticon2-add-1";
-        $_title=$_id>0?"Албан хаагч засварлах":"Албан хаагч бүртгэх";
+        $_title=$_id>0?"Гишүүн засварлах":"Гишүүн бүртгэх";
         $refObj=\Humanres\ReferenceClass::getInstance();
         
-        $_departmentList=\Humanres\DepartmentClass::getInstance()->getRowList(["department_isactive"=>1,'orderby'=>"DepartmentOrder"]);     
-        $_startList=$refObj->getRowList(["orderby"=>"RefStartOrder"],\Humanres\ReferenceClass::TBL_EMPLOYEE_START);
+        $_classIDs=$refObj->getRowList(["_column"=>"RefClassID","ref_type"=>\Humanres\DepartmentClass::CLASS_BASIC],\Humanres\ReferenceClass::TBL_DEPARTMENT_CLASS);
         
+        $_departmentList=\Humanres\DepartmentClass::getInstance()->getRowList(["department_classid"=>$_classIDs,"department_isactive"=>1,'orderby'=>"DepartmentOrder"]);     
+        $_startList=$refObj->getRowList(["ref_type"=>\Humanres\DepartmentClass::CLASS_BASIC,"orderby"=>"RefStartOrder"],\Humanres\ReferenceClass::TBL_EMPLOYEE_START);
+
+        $val_selected="";
+        if(count($_departmentList)==1){
+            $_tmp=reset($_departmentList);
+            if(isset($_tmp['DepartmentID'])){
+                $val_selected=$_tmp['DepartmentID'];
+            }
+        }
 ?>
 <div class="modal-header">
     <h5 class="modal-title"><i class="<?=$_icon;?>"></i> <?=$_title;?></h5>
@@ -38,7 +47,7 @@
 							<i class="flaticon2-layers-2"></i>
 						</div>
 						<div class="kt-wizard-v1__nav-label">
-							2. Нэгж, албан тушаал сонгох
+							2. Нэгж, харьяалал сонгох
 						</div>
 					</div>
 				</div>
@@ -73,28 +82,28 @@
 							<div class="col-lg-6 form-group">
                 				<label class="font-12">Нэгж *:</label>
                 				<select class="form-control kt-input form-control-sm ajax_select" data-col-index="6" name="employee[EmployeeDepartmentID]" 
-                					data-url="<?=RF;?>/m/ajax/select" 
+                					data-url="<?=RF;?>/m/ajax/select?classid=<?=\Humanres\PositionClass::CLASS_BASIC?>" 
                 					data-action="position"
                 					data-val_default="<?=\System\Combo::SELECT_SINGLE;?>"
                 					data-target="#formpositionlist" data-rule-required="true" data-msg-required="Сонгоогүй байна.">
-                					<?php \System\Combo::getCombo(["data"=>$_departmentList,"title"=>"DepartmentFullName","value"=>"DepartmentID","flag"=>\System\Combo::SELECT_SINGLE,'selected'=>""])?>
+                					<?php \System\Combo::getCombo(["data"=>$_departmentList,"title"=>"DepartmentFullName","value"=>"DepartmentID","flag"=>\System\Combo::SELECT_SINGLE,'selected'=>$val_selected])?>
                 				</select>
                 			</div>
                 			<div class="col-lg-6 form-group">
-                				<label class="font-12">Албан тушаал *:</label>
+                				<label class="font-12">Гишүүний харьяалал *:</label>
                 				<select class="form-control form-control-sm" id="formpositionlist" name="employee[EmployeePositionID]" data-rule-required="true" data-msg-required="Сонгоогүй байна.">
                 				</select>
                 			</div>
 						</div>
 						<div class=" row">
                     		<div class="col-lg-4 form-group">
-                    			<label class="font-12">Албан тушаалд томилсон байдал *:</label>
+                    			<label class="font-12">Элссэн байдал *:</label>
                     			<select class="form-control  form-control-sm resfield" data-col-index="2" name="employee[EmployeeStartID]" data-rule-required="true" data-msg-required="Сонгоогүй байна.">
                     				<?php \System\Combo::getCombo(["data"=>$_startList,"title"=>"RefStartTitle","value"=>"RefStartID","flag"=>\System\Combo::SELECT_SINGLE,"selected"=>""])?>
                     			</select>
                     		</div>
                     		<div class="col-lg-4 form-group">
-                        		<label class="font-12">Томилогдсон огноо *:</label>
+                        		<label class="font-12">Шилжиж ирсэн, бүртгэсэн огноо *:</label>
                         		<div class="input-group date">
                         			<input type="text" class="form-control form-control-sm  datepicker resfield"  name="employee[EmployeeStartDate]" placeholder="Өдөр сонгох" value="" data-rule-required="true" data-msg-required="Хоосон байна."/>
                         			<div class="input-group-append">
@@ -104,22 +113,6 @@
                         			</div>
                         		</div>
                         	</div>
-                    		<div class="col-lg-4 form-group">
-                        		<label class="font-12">Тушаалын огноо *:</label>
-                        		<div class="input-group date">
-                        			<input type="text" class="form-control form-control-sm  datepicker resfield"  name="employee[EmployeeStartOrderDate]" placeholder="Өдөр сонгох" value="" data-rule-required="true" data-msg-required="Хоосон байна."/>
-                        			<div class="input-group-append">
-                        				<span class="input-group-text">
-                        					<i class="la la-calendar-check-o"></i>
-                        				</span>
-                        			</div>
-                        		</div>
-                        	</div>
-                        	<div class="col-lg-4 form-group">
-                    			<label class="font-12">Тушаалын дугаар *:</label>
-                    			<input type="text" class="form-control form-control-sm resfield" placeholder="Тушаалын дугаар" name="employee[EmployeeStartOrderNo]" value="" data-rule-required="true" data-msg-required="Хоосон байна.">
-                    		</div>
-                    		
                     	</div>
 					</div>
 				</div>

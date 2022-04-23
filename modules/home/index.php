@@ -20,17 +20,7 @@
 									<a href="javascript:;" class="kt-widget__username">
 										<?=$personObj->PersonLastName;?> <?=$personObj->PersonFirstName;?>
 									</a>
-									<div class="kt-widget__action">
-										<div class="kt-widget__action">
-        									<a href="javascript:;" class="btn btn-primary btn-elevate btn-sm" title="Дэлгэрэнгүй" data-id="<?=$_SESSION[SESSSYSINFO]->PersonID?>" data-toggle="modal" data-target="#detailModal" data-url="<?=RF;?>/m/humanres/detailemployee/main">
-                                                <?php if($personObj->PersonIsEditable){?>
-        											<i class="la la-edit"></i> бүртгэл засах
-    											<?php }else{?>
-    												<i class="la la-search"></i> бүртгэл үзэх
-        										<?php }?>
-                                            </a>
-        								</div>
-									</div>
+									
 								</div>
 								<div class="kt-widget__subhead">
 									<a href="javascript:;"><i class="flaticon2-calendar-3"></i><?=$employeeObj->DepartmentFullName?> </a>

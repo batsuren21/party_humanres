@@ -41,9 +41,9 @@
 <div class="alert alert-outline-danger alert-dismissible fade show" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 	</button>
-	<strong>Анхааруулга!</strong>&nbsp;Одоо идэвхитэй албан тушаал дээр байгаа учир дахин томилох боломжгүй.
+	<strong>Анхааруулга!</strong>&nbsp;Одоо идэвхитэй үүрэнд харьяалагдаж байгаа тул дахин үүрэнд бүртгэх боломжгүй. Өмнөх үүрээс хасалт хийлгэнэ үү.
 </div>
-<div class="kt-heading kt-heading--md">Одоогийн албан тушаал</div>
+<div class="kt-heading kt-heading--md">Одоогийн бүртгэлтэй үүр</div>
 <table class="table table-striped font-12">
 	<tbody>
 		<tr>
@@ -51,16 +51,12 @@
 			<td><?=$employeeObj->DepartmentFullName?></td>
 		</tr>
 		<tr>
-			<td class="color-gray" width="1%" nowrap>Албан тушаал:</td>
+			<td class="color-gray" width="1%" nowrap>Үүр:</td>
 			<td><?=$employeeObj->PositionFullName?></td>
 		</tr>
 		<tr>
-			<td class="color-gray" width="1%" nowrap>Томилогдсон огноо:</td>
+			<td class="color-gray" width="1%" nowrap>Бүртгэсэн огноо:</td>
 			<td><?=$employeeObj->EmployeeStartDate?></td>
-		</tr>
-		<tr>
-			<td class="color-gray" width="1%" nowrap>Томилогдсон тушаал:</td>
-			<td><?=$employeeObj->EmployeeStartOrderNo?></td>
 		</tr>
 	</tbody>
 </table>
@@ -78,6 +74,8 @@
         $birthdate=$_register!=""?($regnum_year."-".$regnum_month."-".$regnum_day):"";
         if($_register!="")
             $regnum_gender = $regnum_gender % 2 == 0 ? 0 : 1;
+        
+        $_areaList=\Office\AreaClass::getInstance()->getRowList(['area_parentid'=>1,'orderby'=>'AreaGlobalID, AreaName']);
             
 ?>
 <div class=" row">
@@ -91,26 +89,64 @@
 	</div>
 	<div class="col-lg-4 form-group">
 		<label class="font-12">Өөрийн нэр *:</label>
-		<input type="text" class="form-control form-control-sm resfield" placeholder="Ургийн овог" name="person[PersonFirstName]" value="" data-rule-required="true" data-msg-required="Хоосон байна.">
+		<input type="text" class="form-control form-control-sm resfield" placeholder="Өөрийн нэр" name="person[PersonFirstName]" value="" data-rule-required="true" data-msg-required="Хоосон байна.">
 	</div>
 </div>
 <div class=" row">
-	<div class="col-lg-4 form-group">
-		<label class="font-12">Төрсөн огноо *:</label>
-		<div class="input-group date">
-			<input type="text" class="form-control form-control-sm  datepicker resfield"  name="person[PersonBirthDate]" placeholder="Өдөр сонгох" value="<?=$birthdate?>" data-rule-required="true" data-msg-required="Хоосон байна."/>
-			<div class="input-group-append">
-				<span class="input-group-text">
-					<i class="la la-calendar-check-o"></i>
-				</span>
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-4 form-group">
-		<label class="font-12">Хүйс *:</label>
-		<select class="form-control form-control-sm resfield" name="person[PersonGender]" data-rule-required="true" data-msg-required="Хоосон байна.">
-			<?php \System\Combo::getCombo(["data"=>\Office\CitizenClass::$gender,"title"=>"title","value"=>"id","flag"=>\System\Combo::SELECT_SINGLE,"selected"=>$regnum_gender])?>
-		</select>
+	<div class="col-lg-8">
+    	<div class=" row">
+        	<div class="col-lg-4 form-group">
+        		<label class="font-12">Төрсөн огноо *:</label>
+        		<div class="input-group date">
+        			<input type="text" class="form-control form-control-sm  datepicker resfield"  name="person[PersonBirthDate]" placeholder="Өдөр сонгох" value="<?=$birthdate?>" data-rule-required="true" data-msg-required="Хоосон байна."/>
+        			<div class="input-group-append">
+        				<span class="input-group-text">
+        					<i class="la la-calendar-check-o"></i>
+        				</span>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-lg-4 form-group">
+        		<label class="font-12">Хүйс *:</label>
+        		<select class="form-control form-control-sm resfield" name="person[PersonGender]" data-rule-required="true" data-msg-required="Хоосон байна.">
+        			<?php \System\Combo::getCombo(["data"=>\Humanres\PersonClass::$gender,"title"=>"title","value"=>"id","flag"=>\System\Combo::SELECT_SINGLE,"selected"=>$regnum_gender])?>
+        		</select>
+        	</div>
+    	</div>
+    	<div class=" row">
+    		<div class="col-lg-4 form-group">
+        		<label class="font-12">Төрсөн газар /Аймаг, нийслэл/*:</label>
+				<select class="form-control kt-input form-control-sm ajax_select" data-col-index="6" name="person[PersonBirthCityID]" 
+        			data-url="<?=RF;?>/m/ajax/select" 
+        			data-action="area"
+        			data-val_default="<?=\System\Combo::SELECT_SINGLE;?>"
+        			data-target="#formareadistrictid" data-rule-required="true" data-msg-required="Сонгоогүй байна.">
+        			<?php \System\Combo::getCombo(["data"=>$_areaList,"title"=>"AreaName","value"=>"AreaID","flag"=>\System\Combo::SELECT_SINGLE,'selected'=>$personObj->PersonBirthCityID])?>
+        		</select>
+        	</div>
+        	<div class="col-lg-4 form-group">
+        		<label class="font-12"> Сум, дүүрэг:</label>
+				<select class="form-control form-control-sm" id="formareadistrictid" name="person[PersonBirthDistrictID]" data-selected="<?=$personObj->PersonBirthDistrictID;?>" data-rule-required="true" data-msg-required="Сонгоогүй байна.">
+    			</select>
+        	</div>
+    	</div>
+    	<div class=" row">
+        	<div class="col-lg-4 form-group">
+        		<label class="font-12">Намд элссэн огноо *:</label>
+        		<div class="input-group date">
+        			<input type="text" class="form-control form-control-sm  datepicker resfield"  name="person[PersonPartyEnterDate]" placeholder="Өдөр сонгох" value="" data-rule-required="true" data-msg-required="Хоосон байна."/>
+        			<div class="input-group-append">
+        				<span class="input-group-text">
+        					<i class="la la-calendar-check-o"></i>
+        				</span>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-lg-4 form-group">
+        		<label class="font-12">Намын батлахын дугаар *:</label>
+        		<input type="text" class="form-control form-control-sm resfield" placeholder="Дугаар" name="person[PersonPartyConfirmNumber]" value="" data-rule-required="true" data-msg-required="Хоосон байна.">
+        	</div>
+    	</div>
 	</div>
 	<div class="col-lg-4">
 		<div class="form-group row">
@@ -131,6 +167,7 @@
 		</div>
 	</div>
 </div>
+
 <?php 
     }
 ?>

@@ -26,7 +26,7 @@
     $searchdata=isset($_REQUEST['searchdata'])?$_REQUEST['searchdata']:array();
     
     $now=new \DateTime();
-    $search=array_merge($searchdata,['person_get_table'=>1]);
+    $search=array_merge($searchdata,['person_get_table'=>1,'position_typeid'=>5]);
     if(!isset($searchdata['employee_isactive'])){
         $search=array_merge($search,['employee_isactive'=>1]);
     }

@@ -5,6 +5,9 @@ class PositionClass extends \Office\CommonMain{
     const TBL_POSITION="position";
     const TBL_POSITION_PREF="position_";
     
+    const CLASS_BASIC=1;
+    const CLASS_ELECT=2;
+    
     public function __construct() {
         $this->con=\Database::instance();
         parent::__construct();
@@ -295,7 +298,6 @@ class PositionClass extends \Office\CommonMain{
         if(isset($search['rowstart']) && isset($search['rowlength'])){
             $qry.=" limit ".$search['rowstart'].",".$search['rowlength'];
         }
-        
         $result = $this->con->select($qry);
         return \Database::getList($result, $search);
     }
@@ -305,27 +307,21 @@ class PositionClass extends \Office\CommonMain{
             $qry="
                 insert into ".DB_DATABASE_HUMANRES.".".self::TBL_POSITION." (
                     PositionDepartmentID,
-                    PositionTypeID,
-                    PositionRankID,
-                    PositionDegreeID,
                     PositionClassID,
+                    PositionTypeID,
                     PositionName,
                     PositionFullName,
                     PositionOrder,
-                    PositionCountPerson,
                     PositionCreatePersonID,
                     PositionCreateEmployeeID,
                     PositionCreateDate
                 ) values(
                     ".$_data['PositionDepartmentID'].",
-                    ".$_data['PositionTypeID'].",
-                    ".$_data['PositionRankID'].",
-                    ".$_data['PositionDegreeID'].",
                     ".$_data['PositionClassID'].",
+                    ".$_data['PositionTypeID'].",
                     ".\System\Util::getInput(\System\Util::uniConvert($_data['PositionName'])).",
                     ".\System\Util::getInput(\System\Util::uniConvert($_data['PositionFullName'])).",
                     ".$_data['PositionOrder'].",
-                    ".(isset($_data['PositionCountPerson'])?$_data['PositionCountPerson']:0).",
                     ".$_data['CreatePersonID'].",
                     ".$_data['CreateEmployeeID'].",
                     NOW()
@@ -343,15 +339,6 @@ class PositionClass extends \Office\CommonMain{
     function validateAddRow($_data=array(),$type=1){
         if(!isset($_data["PositionDepartmentID"]) || $_data["PositionDepartmentID"]===""){
             $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Нэгж сонгоогүй байна',"position[PositionDepartmentID]");
-        }
-        if(!isset($_data["PositionTypeID"]) || $_data["PositionTypeID"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Төрөл сонгоогүй байна',"position[PositionTypeID]");
-        }
-        if(!isset($_data["PositionRankID"]) || $_data["PositionRankID"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Зэрэглэл сонгоогүй байна',"position[PositionRankID]");
-        }
-        if(!isset($_data["PositionDegreeID"]) || $_data["PositionDegreeID"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Зэрэг дэв сонгоогүй байна',"position[PositionDegreeID]");
         }
         if(!isset($_data["PositionClassID"]) || $_data["PositionClassID"]===""){
             $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Ангилал сонгоогүй байна',"position[PositionClassID]");
@@ -382,17 +369,12 @@ class PositionClass extends \Office\CommonMain{
         $this->clearError();
         if($this->validateUpdateRow($_data)){
             $qry_update=array();
-            if(isset($_data['PositionTypeID'])){
-                $qry_update[]=" PositionTypeID=".$_data['PositionTypeID'];
-            }
-            if(isset($_data['PositionRankID'])){
-                $qry_update[]=" PositionRankID=".$_data['PositionRankID'];
-            }
-            if(isset($_data['PositionDegreeID'])){
-                $qry_update[]=" PositionDegreeID=".$_data['PositionDegreeID'];
-            }
+            
             if(isset($_data['PositionClassID'])){
                 $qry_update[]=" PositionClassID=".$_data['PositionClassID'];
+            }
+            if(isset($_data['PositionTypeID'])){
+                $qry_update[]=" PositionTypeID=".$_data['PositionTypeID'];
             }
             if(isset($_data['PositionName'])){
                 $qry_update[]=" PositionName=".\System\Util::getInput(\System\Util::uniConvert($_data['PositionName']));
@@ -438,15 +420,7 @@ class PositionClass extends \Office\CommonMain{
         return false;
     }
     function validateUpdateRow($_data=array(),$type=1){
-        if(isset($_data["PositionTypeID"]) && $_data["PositionTypeID"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Төрөл сонгоогүй байна',"position[PositionTypeID]");
-        }
-        if(isset($_data["PositionRankID"]) && $_data["PositionRankID"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Зэрэглэл сонгоогүй байна',"position[PositionRankID]");
-        }
-        if(isset($_data["PositionDegreeID"]) && $_data["PositionDegreeID"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Зэрэг дэв сонгоогүй байна',"position[PositionDegreeID]");
-        }
+        
         if(isset($_data["PositionClassID"]) && $_data["PositionClassID"]===""){
             $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Ангилал сонгоогүй байна',"position[PositionClassID]");
         }

@@ -136,16 +136,24 @@ class Database{
                     while($row = $result->fetch_array(MYSQLI_ASSOC)){
                         $list[] = $row;
                     }
-                }elseif(!isset($search['_mainindexs'])){
+                }elseif(!isset($search['_mainindexs']) && isset($search['_mainindex'])){
                     while($row = $result->fetch_array(MYSQLI_ASSOC)){
                         $list[$row[$search['_mainindex']]] = $row;
                     }
-                }elseif(isset($search['_mainindexs'])){
+                }elseif(isset($search['_mainindexs']) && !isset($search['_mainindex'])){
                     while($row = $result->fetch_array(MYSQLI_ASSOC)){
                         if(isset($list[$row[$search['_mainindexs']]])){
                             $list[$row[$search['_mainindexs']]][] = $row;
                         }else{
                             $list[$row[$search['_mainindexs']]]=array(0=>$row);
+                        }
+                    }
+                }elseif(isset($search['_mainindexs']) && isset($search['_mainindex'])){
+                    while($row = $result->fetch_array(MYSQLI_ASSOC)){
+                        if(isset($list[$row[$search['_mainindexs']]])){
+                            $list[$row[$search['_mainindexs']]][$row[$search['_mainindex']]] = $row;
+                        }else{
+                            $list[$row[$search['_mainindexs']]]=array($row[$search['_mainindex']]=>$row);
                         }
                     }
                 }

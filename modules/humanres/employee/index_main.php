@@ -42,7 +42,7 @@
 							data-id="0"
 							data-url="<?=RF;?>/m/humanres/form/add_employee">
 							<i class="la la-plus"></i>
-							Албан хаагч бүртгэх
+							Гишүүн бүртгэх
 						</button>
 					<?php }?>
 					</div>

@@ -8,6 +8,16 @@ class PersonClass extends \Office\CommonMain{
     const FILE_PATH="/files/person/portrait/";
     private $img_size = array();
     
+    static $gender=array(
+        0=>["id"=>0,"title"=>"Эмэгтэй"],
+        1=>["id"=>1,"title"=>"Эрэгтэй"],
+    );
+    
+    static $_age=array(
+        0=>["id"=>0,"title"=>"Эмэгтэй"],
+        1=>["id"=>1,"title"=>"Эрэгтэй"],
+    );
+    
     const USER_CREATED=1;
     const USER_CREATED_NOT=0;
     
@@ -566,6 +576,7 @@ class PersonClass extends \Office\CommonMain{
         $qry = "select COUNT(T.PersonID) as AllCount"; 
         $qry.=$this->getQueryBody($qry_cond,2);
         $result = $this->con->select($qry);
+        
         return \Database::getRowCell($result);
     }
     function getRowList($search=array(),$_debug=0){
@@ -626,6 +637,8 @@ class PersonClass extends \Office\CommonMain{
                     PersonMiddleName,
                     PersonBirthDate,
                     PersonGender,
+                    PersonPartyEnterDate,
+                    PersonPartyConfirmNumber,
                     PersonBirthCityID,
                     PersonBirthDistrictID,
                     PersonBirthPlace,
@@ -656,6 +669,8 @@ class PersonClass extends \Office\CommonMain{
                     ".\System\Util::getInput($_data['PersonMiddleName']).",
                     ".\System\Util::getInput($_data['PersonBirthDate']).",
                     ".$_data['PersonGender'].",
+                    ".\System\Util::getInput(isset($_data['PersonPartyEnterDate'])?$_data['PersonPartyEnterDate']:"").",
+                    ".\System\Util::getInput(isset($_data['PersonPartyConfirmNumber'])?\System\Util::uniConvert($_data['PersonPartyConfirmNumber']):"").",
                     ".(isset($_data['PersonBirthCityID'])?$_data['PersonBirthCityID']:"NULL").",
                     ".(isset($_data['PersonBirthDistrictID'])?$_data['PersonBirthDistrictID']:"NULL").",
                     ".\System\Util::getInput(isset($_data['PersonBirthPlace'])?\System\Util::uniConvert($_data['PersonBirthPlace']):"").",

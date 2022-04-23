@@ -34,13 +34,11 @@
                         		<a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#regModal" data-url="<?=RF;?>/m/humanres/form/edit_person_contact" data-id="<?=$personObj->PersonID?>"><i class="fa fa-address-book"></i> Холбоо барих мэдээлэл засах</a>
                     			<?php if($_priv_reg){?>
                     			<?php if($personObj->EmployeeIsActive){?>
-                    			<a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#detailSubModal" data-url="<?=RF;?>/m/humanres/formemployee/employee_start_edit" data-id="<?=$personObj->PersonID?>" data-paramid="<?=$personObj->PersonEmployeeID?>"><i class="la la-edit"></i> Албан тушаалын томилолт засах</a>
-                    			<a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#detailSubModal" data-url="<?=RF;?>/m/humanres/formemployee/employee_quit" data-id="<?=$personObj->PersonID?>" data-paramid="<?=$personObj->PersonEmployeeID?>"><i class="la la-edit"></i> Албан тушаалаас чөлөөлөх</a>
-                    			<?php if(1 || !in_array($personObj->PositionTypeID, [1,2,3,5,6,9,10,11])){?>
-                    			<a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#detailSubModal" data-url="<?=RF;?>/m/humanres/formemployee/employee_quit_inside" data-id="<?=$personObj->PersonID?>" data-paramid="<?=$personObj->PersonEmployeeID?>"><i class="la la-edit"></i> Алба хооронд шилжих</a>
-                    			<?php }?>
+                    			<a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#detailSubModal" data-url="<?=RF;?>/m/humanres/formemployee/employee_start_edit" data-id="<?=$personObj->PersonID?>" data-paramid="<?=$personObj->PersonEmployeeID?>"><i class="la la-edit"></i> Үүрийн бүртгэл засах</a>
+                    			<a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#detailSubModal" data-url="<?=RF;?>/m/humanres/formemployee/employee_quit" data-id="<?=$personObj->PersonID?>" data-paramid="<?=$personObj->PersonEmployeeID?>"><i class="la la-edit"></i> Үүрээс хасах</a>
+                    		
                     			<?php }else{?>
-                    			<a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#detailSubModal" data-url="<?=RF;?>/m/humanres/formemployee/employee_quit" data-id="<?=$personObj->PersonID?>" data-paramid="<?=$personObj->PersonEmployeeID?>"><i class="la la-edit"></i> Албан тушаалын чөлөөлөлт засах</a>
+                    			<a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#detailSubModal" data-url="<?=RF;?>/m/humanres/formemployee/employee_quit" data-id="<?=$personObj->PersonID?>" data-paramid="<?=$personObj->PersonEmployeeID?>"><i class="la la-edit"></i> Үүрээс хассан мэдээлэл засах</a>
                     			<?php }?>
                     			<?php }?>
                     		</div>
@@ -84,20 +82,12 @@
             							<td><?=$personObj->PersonBirthPlace?></td>
             						</tr>
             						<tr>
-            							<td class="color-gray" width="1%" nowrap>Үндсэн захиргаа: </td>
-            							<td><?=$personObj->PersonBasicPlace?></td>
-            						</tr>
-            						<tr>
             							<td class="color-gray" width="1%" nowrap>Гэрийн хаяг: </td>
             							<td><?=$personObj->PersonAddressFull?></td>
             						</tr>
             						<tr>
             							<td class="color-gray" width="1%" nowrap>Боловсрол: </td>
             							<td><?=$_eduLevelObj->RefLevelTitle;?></td>
-            						</tr>
-            						<tr>
-            							<td class="color-gray" width="1%" nowrap>Яс үндэс: </td>
-            							<td><?=$_ethicObj->RefEthnicTitle;?></td>
             						</tr>
             						<tr>
             							<td colspan="2"><center><strong>Холбоо барих мэдээлэл</strong></center></td>
@@ -126,56 +116,42 @@
             				<table class="table table-striped font-12">
             					<tbody>
             						<tr>
-            							<td colspan="2"><center><strong>Томилсон байдал</strong></center></td>
+            							<td colspan="2"><center><strong>Анхан шатны намын бүртгэл</strong></center></td>
             						</tr>
             						<tr>
             							<td class="color-gray" width="1%" nowrap>Нэгж :</td>
             							<td><?=$personObj->DepartmentFullName?></td>
             						</tr>
             						<tr>
-            							<td class="color-gray" width="1%" nowrap>Албан тушаал: </td>
+            							<td class="color-gray" width="1%" nowrap>Үүр: </td>
             							<td><?=$personObj->PositionFullName?></td>
             						</tr>
             						<tr>
-            							<td class="color-gray" width="1%" >Албан тушаалын ангилал, зэрэглэл: </td>
-            							<td><?=$_posclassObj->RefClassTitle?>, <?=$_posrankObj->RefRankTitle?></td>
-            						</tr>
-            						<tr>
-            							<td class="color-gray" width="1%" nowrap>Томилогдсон байдал: </td>
+            							<td class="color-gray" width="1%" nowrap>Бүртгэсэн байдал: </td>
             							<td><?=$_startObj->RefStartTitle?></td>
             						</tr>
             						<tr>
-            							<td class="color-gray" width="1%" nowrap>Томилогдсон огноо: </td>
+            							<td class="color-gray" width="1%" nowrap>Шилжиж ирсэн, бүртгэсэн огноо: </td>
             							<td><?=$personObj->EmployeeStartDate?></td>
             						</tr>
-            						<tr>
-            							<td class="color-gray" width="1%" >Томилогдсон тушаалын дугаар, огноо: </td>
-            							<td><?=$personObj->EmployeeStartOrderNo?>, <?=$personObj->EmployeeStartOrderDate?></td>
-            						</tr>
+            						
             						<?php 
             						      if($personObj->EmployeeQuitID>0){
             						          $_quitObj=$refObj->getRowRef(["ref_id"=>$personObj->EmployeeQuitID],\Humanres\ReferenceClass::TBL_EMPLOYEE_QUIT);
             						          $_quitSubObj=$refObj->getRowRef(["ref_id"=>$personObj->EmployeeQuitSubID],\Humanres\ReferenceClass::TBL_EMPLOYEE_QUIT_SUB);
         						    ?>
             						<tr>
-            							<td colspan="2"><center><strong>Чөлөөлсөн байдал</strong></center></td>
+            							<td colspan="2"><center><strong>Үүрээс хассан байдал</strong></center></td>
             						</tr>
             						<tr>
-            							<td class="color-gray" width="1%" >Хөдөлгөөний төрөл: </td>
+            							<td class="color-gray" width="1%" >Хассан байдал: </td>
             							<td><?=$_quitObj->RefQuitTitle?></td>
             						</tr>
             						<tr>
-            							<td class="color-gray" width="1%" >Чөлөөлсөн байдал: </td>
-            							<td><?=$_quitSubObj->RefSubTitle?></td>
-            						</tr>
-            						<tr>
-            							<td class="color-gray" width="1%" nowrap>Чөлөөлсөн огноо: </td>
+            							<td class="color-gray" width="1%" nowrap>Хассан огноо: </td>
             							<td><?=$personObj->EmployeeQuitDate?></td>
             						</tr>
-            						<tr>
-            							<td class="color-gray" width="1%" >Чөлөөлсөн тушаалын дугаар, огноо: </td>
-            							<td><?=$personObj->EmployeeQuitOrderNo?>, <?=$personObj->EmployeeQuitOrderDate?></td>
-            						</tr>
+            						
             						<?php }?>
             						
     

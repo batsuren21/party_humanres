@@ -5,11 +5,11 @@
         $_id=isset($_POST['id'])?$_POST['id']:0;
         $personObj=\Humanres\PersonClass::getInstance()->getRow(["person_get_table"=>1,'person_id'=>$_id]);
         $_icon="flaticon2-edit";
-        $_title="Албан тушаалын томилолт засварлах";
+        $_title="Үүрийн бүртгэл засварлах";
         
         $refObj=\Humanres\ReferenceClass::getInstance();
         
-        $_startList=$refObj->getRowList(["orderby"=>"RefStartOrder"],\Humanres\ReferenceClass::TBL_EMPLOYEE_START);
+        $_startList=$refObj->getRowList(["ref_type"=>\Humanres\DepartmentClass::CLASS_BASIC,"orderby"=>"RefStartOrder"],\Humanres\ReferenceClass::TBL_EMPLOYEE_START);
         
 ?>
 <form class="kt-form kt-form--label-right" id="letterForm" action="<?=RF;?>/process/humanres/editemployee" enctype="multipart/form-data">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="form-group row mb-0">
-                <label class="col-3 col-form-label font-12">Албан тушаал: </label>
+                <label class="col-3 col-form-label font-12">Үүр: </label>
                 <div class="col-4 pt-2">
                     <strong><?=$personObj->PositionFullName?></strong>
                 </div>
@@ -42,17 +42,17 @@
                 </div>
             </div>
         </div>
-        <h5 class="kt-section__title">2. Томилогдсон байдал:</h5>
+        <h5 class="kt-section__title">2. Бүртгэсэн байдал:</h5>
         <div class="kt-section__body">
             <div class=" row">
         		<div class="col-lg-6 form-group">
-        			<label class="font-12">Албан тушаалд томилсон байдал *:</label>
+        			<label class="font-12">Бүртгэсэн байдал *:</label>
         			<select class="form-control  form-control-sm resfield" data-col-index="2" name="employee[EmployeeStartID]" data-rule-required="true" data-msg-required="Сонгоогүй байна.">
         				<?php \System\Combo::getCombo(["data"=>$_startList,"title"=>"RefStartTitle","value"=>"RefStartID","flag"=>\System\Combo::SELECT_SINGLE,"selected"=>$personObj->EmployeeStartID])?>
         			</select>
         		</div>
         		<div class="col-lg-6 form-group">
-            		<label class="font-12">Томилогдсон огноо *:</label>
+            		<label class="font-12">Шилжиж ирсэн, бүртгэсэн огноо*:</label>
             		<div class="input-group date">
             			<input type="text" class="form-control form-control-sm  datepicker"  name="employee[EmployeeStartDate]" placeholder="Өдөр сонгох" value="<?=$personObj->EmployeeStartDate?>" data-rule-required="true" data-msg-required="Хоосон байна."/>
             			<div class="input-group-append">
@@ -62,21 +62,6 @@
             			</div>
             		</div>
             	</div>
-        		<div class="col-lg-6 form-group">
-            		<label class="font-12">Тушаалын огноо *:</label>
-            		<div class="input-group date">
-            			<input type="text" class="form-control form-control-sm  datepicker"  name="employee[EmployeeStartOrderDate]" placeholder="Өдөр сонгох" value="<?=$personObj->EmployeeStartOrderDate?>" data-rule-required="true" data-msg-required="Хоосон байна."/>
-            			<div class="input-group-append">
-            				<span class="input-group-text">
-            					<i class="la la-calendar-check-o"></i>
-            				</span>
-            			</div>
-            		</div>
-            	</div>
-            	<div class="col-lg-6 form-group">
-        			<label class="font-12">Тушаалын дугаар *:</label>
-        			<input type="text" class="form-control form-control-sm resfield" placeholder="Тушаалын дугаар" name="employee[EmployeeStartOrderNo]" value="<?=$personObj->EmployeeStartOrderNo?>" data-rule-required="true" data-msg-required="Хоосон байна.">
-        		</div>
         		
         	</div>
         </div>

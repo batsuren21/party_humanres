@@ -5,6 +5,9 @@ class DepartmentClass extends \Office\CommonMain{
     const TBL_DEPARTMENT="department";
     const TBL_DEPARTMENT_PREF="department_";
     
+    const CLASS_BASIC=1;
+    const CLASS_ELECT=2;
+    
     public function __construct() {
         $this->con=\Database::instance();
         parent::__construct();
@@ -399,31 +402,23 @@ class DepartmentClass extends \Office\CommonMain{
             $qry="
                 insert into ".DB_DATABASE_HUMANRES.".".self::TBL_DEPARTMENT." (
                     DepartmentParentID,
-                    DepartmentTypeID,
                     DepartmentClassID,
                     DepartmentPeriodID,
                     DepartmentName,
                     DepartmentFullName,
-                    DepartmentFunction,
                     DepartmentOrder,
                     DepartmentIsActive,
-                    DepartmentCountJob,
-                    DepartmentAreaIDs,
                     DepartmentCreatePersonID,
                     DepartmentCreateEmployeeID,
                     DepartmentCreateDate
                 ) values(
                     ".(isset($_data['DepartmentParentID']) && $_data['DepartmentParentID']!=""?$_data['DepartmentParentID']:0).",
-                    ".$_data['DepartmentTypeID'].",
                     ".$_data['DepartmentClassID'].",
                     ".$_data['DepartmentPeriodID'].",
                     ".\System\Util::getInput(\System\Util::uniConvert($_data['DepartmentName'])).",
                     ".\System\Util::getInput(\System\Util::uniConvert($_data['DepartmentFullName'])).",
-                    ".\System\Util::getInput(isset($_data['DepartmentFunction'])?\System\Util::uniConvert($_data['DepartmentFunction']):"").",
                     ".$_data['DepartmentOrder'].",
                     ".$_data['DepartmentIsActive'].",
-                    ".$_data['DepartmentCountJob'].",
-                    ".\System\Util::getInput($_data['DepartmentAreaIDs']).",
                     ".$_data['CreatePersonID'].",
                     ".$_data['CreateEmployeeID'].",
                     NOW()
@@ -442,8 +437,8 @@ class DepartmentClass extends \Office\CommonMain{
         if(!isset($_data["DepartmentPeriodID"]) || $_data["DepartmentPeriodID"]===""){
             $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Системийн алдаа.  хоосон байна');
         }
-        if(!isset($_data["DepartmentTypeID"]) || $_data["DepartmentTypeID"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Төрөл сонгоогүй байна',"department[DepartmentTypeID]");
+        if(!isset($_data["DepartmentClassID"]) || $_data["DepartmentClassID"]===""){
+            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Ангилал сонгоогүй байна',"department[DepartmentClassID]");
         }
         if(!isset($_data["DepartmentName"]) || $_data["DepartmentName"]===""){
             $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Нэр хоосон байна',"department[DepartmentName]");
@@ -455,11 +450,6 @@ class DepartmentClass extends \Office\CommonMain{
             $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Эрэмбэ хоосон байна',"department[DepartmentOrder]");
         }elseif(isset($_data["DepartmentOrder"]) && !is_numeric($_data["DepartmentOrder"])){
             $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Эрэмбэ тоо байх ёстой',"department[DepartmentOrder]");
-        }
-        if(!isset($_data["DepartmentCountJob"]) || $_data["DepartmentCountJob"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Орон тоо хоосон байна',"department[DepartmentCountJob]");
-        }elseif(isset($_data["DepartmentCountJob"]) && !is_numeric($_data["DepartmentCountJob"])){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Орон тоо тоо байх ёстой',"department[DepartmentCountJob]");
         }
         if($type==1){
             if(!isset($_data["CreatePersonID"]) || $_data["CreatePersonID"]===""){
@@ -487,14 +477,8 @@ class DepartmentClass extends \Office\CommonMain{
             if(isset($_data['DepartmentFullName'])){
                 $qry_update[]=" DepartmentFullName=".\System\Util::getInput(\System\Util::uniConvert($_data['DepartmentFullName']));
             }
-            if(isset($_data['DepartmentFunction'])){
-                $qry_update[]=" DepartmentFunction=".\System\Util::getInput(\System\Util::uniConvert($_data['DepartmentFunction']));
-            }
             if(isset($_data['DepartmentCountJob'])){
                 $qry_update[]=" DepartmentCountJob=".$_data['DepartmentCountJob'];
-            }
-            if(isset($_data['DepartmentAreaIDs'])){
-                $qry_update[]=" DepartmentAreaIDs=".\System\Util::getInput($_data['DepartmentAreaIDs']);
             }
             if(isset($_data['DepartmentOrder'])){
                 $qry_update[]=" DepartmentOrder=".$_data['DepartmentOrder'];
@@ -536,9 +520,6 @@ class DepartmentClass extends \Office\CommonMain{
         return false;
     }
     function validateUpdateRow($_data=array(),$type=1){
-        if(isset($_data["DepartmentTypeID"]) && $_data["DepartmentTypeID"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Төрөл сонгоогүй байна',"department[DepartmentTypeID]");
-        }
         if(isset($_data["DepartmentClassID"]) && $_data["DepartmentClassID"]===""){
             $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Ангилал сонгоогүй байна',"department[DepartmentClassID]");
         }
@@ -552,11 +533,6 @@ class DepartmentClass extends \Office\CommonMain{
             $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Эрэмбэ хоосон байна',"department[DepartmentOrder]");
         }elseif(isset($_data["DepartmentOrder"]) && !is_numeric($_data["DepartmentOrder"])){
             $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Эрэмбэ тоо байх ёстой',"department[DepartmentOrder]");
-        }
-        if(isset($_data["DepartmentCountJob"]) && $_data["DepartmentCountJob"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Орон тоо хоосон байна',"department[DepartmentCountJob]");
-        }elseif(isset($_data["DepartmentCountJob"]) && !is_numeric($_data["DepartmentCountJob"])){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Орон тоо тоо байх ёстой',"department[DepartmentCountJob]");
         }
         if($type==1){
             if(!isset($_data["UpdatePersonID"]) || $_data["UpdatePersonID"]===""){

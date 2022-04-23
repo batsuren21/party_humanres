@@ -5,16 +5,13 @@ if($_priv_reg){
     $_id=isset($_POST['id'])?$_POST['id']:0;
     $personObj=\Humanres\PersonClass::getInstance()->getRow(["person_get_table"=>1,'person_id'=>$_id]);
     $_icon="flaticon2-edit";
-    $_title="Албан тушаалаас чөлөөлөх";
+    $_title="Үүрээс хасах";
     
     $refObj=\Humanres\ReferenceClass::getInstance();
     
-    $_quitList=$refObj->getRowList(["orderby"=>"RefQuitOrder"],\Humanres\ReferenceClass::TBL_EMPLOYEE_QUIT);
+    $_quitList=$refObj->getRowList(["ref_type"=>\Humanres\DepartmentClass::CLASS_BASIC,"orderby"=>"RefQuitOrder"],\Humanres\ReferenceClass::TBL_EMPLOYEE_QUIT);
     
-    $_count_letter=\Office\LetterClass::getInstance()->getRowCount(['letter_statusid'=>\Office\LetterClass::LETTER_CONTROL,'letter_lastshiftpersonid'=>$personObj->PersonID]);
-    $_count_petition=\Office\PetitionClass::getInstance()->getRowCount(['petition_statusid'=>\Office\PetitionClass::PETITION_CONTROL,'petition_lastshiftpersonid'=>$personObj->PersonID]);
-    $_count_felony=\Office\FelonyClass::getInstance()->getRowCount(['felony_statusid'=>\Office\FelonyClass::FELONY_CONTROL,'felony_mainpersonid'=>$personObj->PersonID]);
-    $_is_can=$_count_letter<1 && $_count_petition<1 && $_count_felony<1?1:0;
+    $_is_can=1;
     
     $jobCount=\Humanres\PersonJobClass::getInstance()->getRowCount([
         "job_personid"=>$personObj->PersonID,
@@ -39,7 +36,7 @@ if($_priv_reg){
                 </div>
             </div>
             <div class="form-group row mb-0">
-                <label class="col-3 col-form-label font-12">Албан тушаал: </label>
+                <label class="col-3 col-form-label font-12">Үүр: </label>
                 <div class="col-4 pt-2">
                     <strong><?=$personObj->PositionFullName?></strong>
                 </div>
@@ -51,12 +48,11 @@ if($_priv_reg){
                 </div>
             </div>
         </div>
-        <h5 class="kt-section__title">2. Чөлөөлсөн байдал:</h5>
+        <h5 class="kt-section__title">2. Үүрээс хассан байдал:</h5>
         <div class="kt-section__body">
-        	<?php if($_count_letter<1 && $_count_petition<1 && $_count_felony<1 && $jobCount<1){?>
             <div class=" row">
         		<div class="col-lg-6 form-group">
-    				<label class="font-12">Хөдөлгөөний төрөл *:</label>
+    				<label class="font-12">Хассан байдал *:</label>
     				<select class="form-control kt-input form-control-sm ajax_select" data-col-index="6" name="employee[EmployeeQuitID]" 
     					data-url="<?=RF;?>/m/ajax/select" 
     					data-action="ref_quit"
@@ -66,13 +62,13 @@ if($_priv_reg){
     				</select>
     			</div>
     			<div class="col-lg-6 form-group">
-    				<label class="font-12">Чөлөөлсөн байдал *:</label>
+    				<label class="font-12"> байдал *:</label>
     				<select class="form-control form-control-sm" id="formquitsub" name="employee[EmployeeQuitSubID]" data-rule-required="true" data-msg-required="Сонгоогүй байна." data-selected="<?=$personObj->EmployeeQuitSubID?>">
     				</select>
     			</div>
         		
         		<div class="col-lg-4 form-group">
-            		<label class="font-12">Чөлөөлсөн огноо *:</label>
+            		<label class="font-12">Хассан огноо *:</label>
             		<div class="input-group date">
             			<input type="text" class="form-control form-control-sm  datepicker"  name="employee[EmployeeQuitDate]" placeholder="Өдөр сонгох" value="<?=$personObj->EmployeeQuitDate?>" data-rule-required="true" data-msg-required="Хоосон байна."/>
             			<div class="input-group-append">
@@ -82,56 +78,8 @@ if($_priv_reg){
             			</div>
             		</div>
             	</div>
-        		<div class="col-lg-4 form-group">
-            		<label class="font-12">Тушаалын огноо *:</label>
-            		<div class="input-group date">
-            			<input type="text" class="form-control form-control-sm  datepicker"  name="employee[EmployeeQuitOrderDate]" placeholder="Өдөр сонгох" value="<?=$personObj->EmployeeQuitOrderDate?>" data-rule-required="true" data-msg-required="Хоосон байна."/>
-            			<div class="input-group-append">
-            				<span class="input-group-text">
-            					<i class="la la-calendar-check-o"></i>
-            				</span>
-            			</div>
-            		</div>
-            	</div>
-            	<div class="col-lg-4 form-group">
-        			<label class="font-12">Тушаалын дугаар *:</label>
-        			<input type="text" class="form-control form-control-sm resfield" placeholder="Тушаалын дугаар" name="employee[EmployeeQuitOrderNo]" value="<?=$personObj->EmployeeQuitOrderNo?>" data-rule-required="true" data-msg-required="Хоосон байна.">
-        		</div>
+        		
         	</div>
-        	<?php }else{?>
-        	<div class=" row">
-        		<div class="col-lg-6 offset-lg-3">
-        			<div class="alert alert-outline-danger" role="alert">
-						<div class="alert-icon"><i class="flaticon-warning"></i></div>
-						<div class="alert-text font-12">
-							Албан хаагчид шийдвэрлээгүй үлдсэн <strong>ирсэн бичиг, өргөдөл гомдол болон бусад мэдээллүүд</strong> байгаа учир чөлөөлөх боломжгүй.
-						</div>
-					</div>
-        			<table class="table table-striped font-12">
-					<tbody>
-						<tr>
-							<td class="color-gray" width="1%" nowrap>Шийдвэрлээгүй ирсэн бичиг</td>
-							<td><?=$_count_letter?></td>
-						</tr>
-						<tr>
-							<td class="color-gray" width="1%" nowrap>Шийдвэрлээгүй өргөдөл, гомдол</td>
-							<td><?=$_count_petition?></td>
-						</tr>
-						<tr>
-							<td class="color-gray" width="1%" nowrap>Шийдвэрлээгүй хэрэг</td>
-							<td><?=$_count_felony?></td>
-						</tr>
-						<?php if($jobCount>0){?>
-						<tr>
-							<td class="color-gray" width="1%" nowrap>Хөдөлмөр эрхлэлт</td>
-							<td>Хөдөлмөр эрхлэлтэд одоо ажиллаж байгаа төлөвтэй бичлэг байгаа тул чөлөөлөх боломжгүй</td>
-						</tr>
-						<?php }?>
-					</tbody>
-					</table>
-        		</div>
-        	</div>
-        	<?php }?>
         </div>
     </div>
 </div>

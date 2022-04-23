@@ -332,8 +332,6 @@ class EmployeeClass extends \Office\CommonMain{
                     EmployeeIsActive,
                     EmployeeStartID,
                     EmployeeStartDate,
-                    EmployeeStartOrderNo,
-                    EmployeeStartOrderDate,
                     EmployeeCreatePersonID,
                     EmployeeCreateEmployeeID,
                     EmployeeCreateDate
@@ -344,8 +342,6 @@ class EmployeeClass extends \Office\CommonMain{
                     1,
                     ".$_data['EmployeeStartID'].",
                     ".\System\Util::getInput($_data['EmployeeStartDate']).",
-                    ".\System\Util::getInput(\System\Util::uniConvert($_data['EmployeeStartOrderNo'])).",
-                    ".\System\Util::getInput($_data['EmployeeStartOrderDate']).",
                     ".$_data['CreatePersonID'].",
                     ".$_data['CreateEmployeeID'].",
                     NOW()
@@ -376,12 +372,7 @@ class EmployeeClass extends \Office\CommonMain{
         if(!isset($_data["EmployeeStartDate"]) || $_data["EmployeeStartDate"]===""){
             $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Томилогдсон огноо сонгоогүй байна',"employee[EmployeeStartDate]");
         }
-        if(!isset($_data["EmployeeStartOrderNo"]) || $_data["EmployeeStartOrderNo"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Тушаалын дугаар хоосон байна',"employee[EmployeeStartOrderNo]");
-        }
-        if(!isset($_data["EmployeeStartOrderDate"]) || $_data["EmployeeStartOrderDate"]===""){
-            $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Тушаалын огноо хоосон байна',"employee[EmployeeStartOrderDate]");
-        }
+        
         if($type==1){
             if(!isset($_data["CreatePersonID"]) || $_data["CreatePersonID"]===""){
                 $this->addError(\System\Error::ERROR_REQUIRED_EMPTY, 'Системийн алдаа. Бүртгэж буй хэрэглэгч олдсонгүй.');

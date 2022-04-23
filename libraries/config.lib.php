@@ -30,7 +30,7 @@
     define("SESSUSERID", SESSRANDNUM . "userid");
     define("SESSSYSINFO", SESSRANDNUM ."SYSINFO");
     
-    define("COOKIENAME", "GLOBCVAL_SG");
+    define("COOKIENAME", "GLOBCVAL_PARTY");
     define("COOKIE_EXPIRE_TIME", time() + 60 * 60 * 24 * 30);
     define("COOKIE_PATH", "/");
     define("COOKIE_DOMAIN", null);

@@ -57,9 +57,9 @@ var AppLogin = function() {
                 if(typeof jsonData !== 'undefined' && jsonData!="" && jsonData._state) {
                     toastr.success(jsonData._text);
                     setTimeout(function(){
-//                        if(jsonData._url!== 'undefined'){
-//                            window.location=jsonData._url;
-//                        }else window.location=KTAppOptions._RF;
+                        if(jsonData._url!== 'undefined'){
+                            window.location=jsonData._url;
+                        }else window.location=KTAppOptions._RF;
                     }, 3000);
                 } else {
                     App.showErrorValidate(jsonData,validator);

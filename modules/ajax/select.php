@@ -110,218 +110,7 @@ switch ($action) {
         header("Content-type: application/json");
         echo json_encode($result);
         exit;
-    case "fln_place":
-        $_flag=isset($_POST['val_default'])?$_POST['val_default']:"1";
-        $_param=isset($_POST['param']) && $_POST['param']!=""?$_POST['param']:0;
-        $parent_value=isset($_POST['parent_value'])?$_POST['parent_value']:"";
-        if($parent_value==""){
-            ob_start();
-            System\Combo::getCombo(array("data"=>[],"value"=>"PlaceID","title"=>array("PlaceTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-            $_content = ob_get_contents();
-            ob_end_clean();
-            $result['_state'] = true;
-            $result['_html'] = $_content;
-            header("Content-type: application/json");
-            echo json_encode($result);
-            exit;
-        }
-        $_list=\Office\FelonyPlaceClass::getInstance()->getRowList(array(
-           
-            "place_classid"=>$parent_value,
-            "orderby"=>array("T.PlaceOrder")));
-        
-        ob_start();
-        System\Combo::getCombo(array("data"=>$_list,"value"=>"PlaceID","title"=>array("PlaceTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-        $_content = ob_get_contents();
-        ob_end_clean();
-        
-        $result['_state'] = true;
-        $result['_html'] = $_content;
-        header("Content-type: application/json");
-        echo json_encode($result);
-        exit;
-    case "defposition":
-        $_flag=isset($_POST['val_default'])?$_POST['val_default']:"1";
-        $_param=isset($_POST['param']) && $_POST['param']!=""?$_POST['param']:0;
-        $parent_value=isset($_POST['parent_value'])?$_POST['parent_value']:"";
-        if($parent_value==""){
-            ob_start();
-            System\Combo::getCombo(array("data"=>[],"value"=>"PositionSubID","title"=>array("PositionSubTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-            $_content = ob_get_contents();
-            ob_end_clean();
-            $result['_state'] = true;
-            $result['_html'] = $_content;
-            header("Content-type: application/json");
-            echo json_encode($result);
-            exit;
-        }
-        $_list=\Office\AccusedDefendantPositionSubClass::getInstance()->getRowList(array(
-            "positionsub_positionid"=>$parent_value,
-            "orderby"=>array("T.PositionSubOrder")));
-        
-        ob_start();
-        System\Combo::getCombo(array("data"=>$_list,"value"=>"PositionSubID","title"=>array("PositionSubTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-        $_content = ob_get_contents();
-        ob_end_clean();
-        
-        $result['_state'] = true;
-        $result['_html'] = $_content;
-        header("Content-type: application/json");
-        echo json_encode($result);
-        exit;
-    case "fln_seal_class":
-        $_flag=isset($_POST['val_default'])?$_POST['val_default']:"1";
-        $_param=isset($_POST['param']) && $_POST['param']!=""?$_POST['param']:0;
-        $parent_value=isset($_POST['parent_value'])?$_POST['parent_value']:"";
-        if($parent_value==""){
-            ob_start();
-            System\Combo::getCombo(array("data"=>[],"value"=>"ClassID","title"=>array("ClassTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-            $_content = ob_get_contents();
-            ob_end_clean();
-            $result['_state'] = true;
-            $result['_html'] = $_content;
-            header("Content-type: application/json");
-            echo json_encode($result);
-            exit;
-        }
-        $_list=\Office\FelonySealClassClass::getInstance()->getRowList(array(
-            "class_parentid"=>$parent_value,
-            "orderby"=>array("T.ClassOrder")));
-        
-        ob_start();
-        System\Combo::getCombo(array("data"=>$_list,"value"=>"ClassID","title"=>array("ClassTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-        $_content = ob_get_contents();
-        ob_end_clean();
-        
-        $result['_state'] = true;
-        $result['_html'] = $_content;
-        header("Content-type: application/json");
-        echo json_encode($result);
-        exit;
-    case "fln_accused_terms":
-        $_flag=isset($_POST['val_default'])?$_POST['val_default']:"1";
-        $_param=isset($_POST['param']) && $_POST['param']!=""?$_POST['param']:0;
-        $parent_value=isset($_POST['parent_value'])?$_POST['parent_value']:"";
-        if($parent_value==""){
-            ob_start();
-            System\Combo::getCombo(array("data"=>[],"value"=>"ClassID","title"=>array("ClassTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-            $_content = ob_get_contents();
-            ob_end_clean();
-            $result['_state'] = true;
-            $result['_html'] = $_content;
-            header("Content-type: application/json");
-            echo json_encode($result);
-            exit;
-        }
-        
-        $_list=\Office\AccusedTermClass::getInstance()->getRowList([
-            "_getparams"=>['ATermLastTermID'],
-            "aterm_accusedid"=>$parent_value]);
-        
-        if(isset($_list['ATermLastTermID']) && count($_list['ATermLastTermID'])>0) $selectedTerms=$_list['ATermLastTermID'];
-        $_termList=\Office\TermClass::getInstance()->getRowList([
-            "_select"=>["T1.ClassID, T1.ClassShortName, T.TermID, CONCAT(T1.ClassShortName,' ',T.TermNumber,IF(T.TermNumberSub IS NULL,'',CONCAT('.',T.TermNumberSub))) as TermName"],
-            "term_get_table"=>1,
-            "term_id"=>$selectedTerms,
-            "orderby"=>"T1.ClassOrder, T.TermNumber, T.TermNumberSub"]);
     
-        ob_start();
-        \System\Combo::getComboGroup(["data"=>$_termList,"title"=>"TermName","value"=>"TermID","group"=>"ClassShortName","flag"=>\System\Combo::SELECT_SINGLE,'selected'=>$val_selected]);
-        $_content = ob_get_contents();
-        ob_end_clean();
-        
-        $result['_state'] = true;
-        $result['_html'] = $_content;
-        header("Content-type: application/json");
-        echo json_encode($result);
-        exit;
-    case "fln_decide":
-        $_flag=isset($_POST['val_default'])?$_POST['val_default']:"1";
-        $_param=isset($_POST['param']) && $_POST['param']!=""?$_POST['param']:0;
-        $parent_value=isset($_POST['parent_value'])?$_POST['parent_value']:"";
-        if($parent_value==""){
-            ob_start();
-            System\Combo::getCombo(array("data"=>[],"value"=>"DecideID","title"=>array("DecideTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-            $_content = ob_get_contents();
-            ob_end_clean();
-            $result['_state'] = true;
-            $result['_html'] = $_content;
-            header("Content-type: application/json");
-            echo json_encode($result);
-            exit;
-        }
-        $_list=\Office\FelonyDecideTypeClass::getInstance()->getRowList(array(
-            "decide_parentid"=>$parent_value,
-            "orderby"=>array("T.DecideOrder")));
-        
-        ob_start();
-        System\Combo::getCombo(array("data"=>$_list,"value"=>"DecideID","title"=>array("DecideTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-        $_content = ob_get_contents();
-        ob_end_clean();
-        
-        $result['_state'] = true;
-        $result['_html'] = $_content;
-        header("Content-type: application/json");
-        echo json_encode($result);
-        exit;
-    case "petition_decide":
-        $_flag=isset($_POST['val_default'])?$_POST['val_default']:"1";
-        $_param=isset($_POST['param']) && $_POST['param']!=""?$_POST['param']:0;
-        $parent_value=isset($_POST['parent_value'])?$_POST['parent_value']:"";
-        if($parent_value==""){
-            ob_start();
-            System\Combo::getCombo(array("data"=>[],"value"=>"DecideID","title"=>array("DecideTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-            $_content = ob_get_contents();
-            ob_end_clean();
-            $result['_state'] = true;
-            $result['_html'] = $_content;
-            header("Content-type: application/json");
-            echo json_encode($result);
-            exit;
-        }
-        $_list=\Office\PetitionDecideClass::getInstance()->getRowList(array(
-            "decide_parentid"=>$parent_value,
-            "orderby"=>array("T.DecideOrder")));
-        
-        ob_start();
-        System\Combo::getCombo(array("data"=>$_list,"value"=>"DecideID","title"=>array("DecideTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-        $_content = ob_get_contents();
-        ob_end_clean();
-        
-        $result['_state'] = true;
-        $result['_html'] = $_content;
-        header("Content-type: application/json");
-        echo json_encode($result);
-        exit;
-    case "fln_organ":
-        $_flag=isset($_POST['val_default'])?$_POST['val_default']:"1";
-        $_param=isset($_POST['param']) && $_POST['param']!=""?$_POST['param']:0;
-        $parent_value=isset($_POST['parent_value'])?$_POST['parent_value']:"";
-        if($parent_value==""){
-            ob_start();
-            System\Combo::getCombo(array("data"=>[],"value"=>"OrganID","title"=>array("OrganTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-            $_content = ob_get_contents();
-            ob_end_clean();
-            $result['_state'] = true;
-            $result['_html'] = $_content;
-            header("Content-type: application/json");
-            echo json_encode($result);
-            exit;
-        }
-        $_list=\Office\FelonyOrganClass::getInstance()->getRowList(array(
-            "organ_classid"=>$parent_value,
-            "orderby"=>array("T.OrganOrder")));
-        
-        ob_start();
-        System\Combo::getCombo(array("data"=>$_list,"value"=>"OrganID","title"=>array("OrganTitle"),"flag"=> $_flag,"selected"=>$val_selected));
-        $_content = ob_get_contents();
-        ob_end_clean();
-        
-        $result['_state'] = true;
-        $result['_html'] = $_content;
-        header("Content-type: application/json");
-        echo json_encode($result);
-        exit;
     case "position":
         $_flag=isset($_POST['val_default'])?$_POST['val_default']:"1";
         $_param=isset($_POST['param']) && $_POST['param']!=""?$_POST['param']:0;
@@ -346,6 +135,12 @@ switch ($action) {
                 $_search=array_merge($_search,['position_typeid'=>$typeids]);
             }
         }
+        if(isset($_GET['classid'])){
+            $classid=explode(",", $_GET['classid']);
+            if(count($classid)>0){
+                $_search=array_merge($_search,['position_classid'=>$classid]);
+            }
+        }
         if(isset($_GET['notid'])){
             $notids=explode(",", $_GET['notid']);
             if(count($notids)>0){
@@ -353,8 +148,16 @@ switch ($action) {
             }
         }
         
-        
         $_list=\Humanres\PositionClass::getInstance()->getRowList($_search);
+        
+        if(empty($val_selected)){
+            if(count($_list)==1){
+                $_tmp=reset($_list);
+                if(isset($_tmp['PositionID'])){
+                    $val_selected=$_tmp['PositionID'];
+                }
+            }
+        }
         
         ob_start();
         System\Combo::getCombo(array("data"=>$_list,"value"=>"PositionID","title"=>array("PositionFullName"),"flag"=> $_flag,"selected"=>$val_selected));

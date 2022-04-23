@@ -1,0 +1,23 @@
+<?php 
+$j=3;
+/****/
+$activesheet->setCellValueByColumnAndRow($j,$_row_body,($allStatObj->PersonAllCount!=""?$allStatObj->PersonAllCount:0));
+$j++;
+/****/
+$activesheet->setCellValueByColumnAndRow($j,$_row_body,($allStatObj->{"PersonGender0"}!=""?$allStatObj->{"PersonGender0"}:0));
+$j++;
+/****/
+$activesheet->setCellValueByColumnAndRow($j,$_row_body,($allStatObj->{"PersonGender1"}!=""?$allStatObj->{"PersonGender1"}:0));
+$j++;
+/****/
+if(isset($_time_list)){
+    foreach ($_time_list as $tmp){
+        $activesheet->setCellValueByColumnAndRow($j,$_row_body,($allStatObj->{"TimeList".$tmp['id']}!=""?$allStatObj->{"TimeList".$tmp['id']}:0));
+        $j++;
+        $activesheet->setCellValueByColumnAndRow($j,$_row_body,($allStatObj->{"TimeList".$tmp['id']."_0"}!=""?$allStatObj->{"TimeList".$tmp['id']."_0"}:0));
+        $j++;
+        $activesheet->setCellValueByColumnAndRow($j,$_row_body,($allStatObj->{"TimeList".$tmp['id']."_1"}!=""?$allStatObj->{"TimeList".$tmp['id']."_1"}:0));
+        $j++;
+    }
+}
+$_row_body++;
