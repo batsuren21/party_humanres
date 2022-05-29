@@ -14,7 +14,7 @@ if($_priv_reg){
     
     $_punishmentList=$refObj->getRowList(["orderby"=>"RefPunishmentOrder"],\Humanres\ReferenceClass::TBL_PUNISHMENT);
    
-    $is_now=$punishmentObj->isExist()?$punishmentObj->PunishmentRefID==2?1:0:0;
+    $is_now=$punishmentObj->isExist()?($punishmentObj->PunishmentRefID==2?1:0):0;
 ?>
 <form class="kt-form kt-form--label-right" id="felonyFormAdmin" action="<?=RF;?>/process/humanreselect/<?=$_paramid>0?"updatepunishment":"addpunishment"?>" enctype="multipart/form-data">
 <div class="modal-header">
